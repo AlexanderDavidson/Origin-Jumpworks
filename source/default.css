@@ -80,7 +80,27 @@ hr {
   background-color: #3f3f3f;
 }
 
+.accordion div:nth-child(7) {
+  background-color: #2e2e2e;
+}
+
+.accordion div:nth-child(8) {
+  background-color: #3f3f3f;
+}
+
+.accordion div:nth-child(9) {
+  background-color: #171717;
+}
+
+.accordion div:nth-child(10) {
+  background-color: #3f3f3f;
+}
+
 .accordion div:nth-child(6) > h2 {
+  padding: 1em !important;
+}
+
+.accordion div:nth-child(10) > h2 {
   padding: 1em !important;
 }
 
@@ -127,6 +147,20 @@ hr {
 }
 
 #ship-info-m50 {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-bottom: 3vh !important;
+}
+
+/* ============ 890 ============ */
+#ship-view-890 {
+  background-color: rgb(115, 115, 140);
+  height: 45vh;
+}
+
+#ship-info-890 {
   font-family: 'Josefin Sans', sans-serif;
   background-color: black;
   color: white;
