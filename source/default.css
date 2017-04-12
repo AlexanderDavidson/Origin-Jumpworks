@@ -1,0 +1,83 @@
+/* ============ Globals ============ */
+.row {
+  padding: 0 !important;
+}
+
+.column {
+  padding: 0 !important;
+}
+
+hr {
+  width: 30%;
+  margin-bottom: 2em;
+}
+
+.ship-title {
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  position: absolute;
+  bottom: -9px;
+}
+
+.ship-title-bg {
+  font-size: 30vw;
+}
+
+.ship-title-sm {
+  font-size: 0.6em;
+}
+
+.flavor-title {
+  margin-top: 1em;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.info {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-text {
+  width: 50%;
+  padding-left: 4em;
+  overflow: auto;
+}
+
+.accordion {
+  background-color: black;
+  color: white;
+}
+
+.accordion div:nth-child(1) {
+  background-color: #171717;
+}
+
+.accordion div:nth-child(3) {
+  background-color: #2e2e2e;
+}
+
+.accordion div:nth-child(5) {
+  background-color: #454545;
+}
+
+.accordion > .title {
+  color: white !important;
+  padding-bottom: 1em !important;
+  padding-left: 1em !important;
+}
+
+/* ============ 85x ============ */
+#ship-view-85x {
+  background-color: rgb(115, 115, 140);
+  height: 45vh;
+}
+
+#ship-info-85x {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-bottom: 3vh !important;
+}
