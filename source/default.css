@@ -119,3 +119,17 @@ hr {
   text-align: center;
   padding-bottom: 3vh !important;
 }
+
+/* ============ M50 ============ */
+#ship-view-m50 {
+  background-color: rgb(115, 115, 140);
+  height: 45vh;
+}
+
+#ship-info-m50 {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-bottom: 3vh !important;
+}
