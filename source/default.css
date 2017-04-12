@@ -1,4 +1,9 @@
 /* ============ Globals ============ */
+
+a {
+  color: rgb(115, 115, 140) !important;
+}
+
 .row {
   padding: 0 !important;
 }
@@ -47,25 +52,58 @@ hr {
 
 .accordion {
   background-color: black;
-  color: white;
+  color: white !important;
+  font-family: 'Josefin Sans', sans-serif !important;
 }
 
 .accordion div:nth-child(1) {
   background-color: #171717;
 }
 
+.accordion div:nth-child(2) {
+  background-color: #3f3f3f;
+}
+
 .accordion div:nth-child(3) {
   background-color: #2e2e2e;
+}
+
+.accordion div:nth-child(4) {
+  background-color: #3f3f3f;
 }
 
 .accordion div:nth-child(5) {
   background-color: #454545;
 }
 
+.accordion div:nth-child(6) {
+  background-color: #3f3f3f;
+}
+
+.accordion div:nth-child(6) > h2 {
+  padding: 1em !important;
+}
+
 .accordion > .title {
   color: white !important;
   padding-bottom: 1em !important;
   padding-left: 1em !important;
+}
+
+.accordion > .content > h2 {
+  color: white !important;
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.accordion > .content > .table {
+  color: white !important;
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.accordion > .content > .table > tbody > tr > th {
+  color: white !important;
+  font-family: 'Josefin Sans', sans-serif !important;
+  padding-left: 1em;
 }
 
 /* ============ 85x ============ */
