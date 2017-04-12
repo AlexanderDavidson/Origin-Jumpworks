@@ -167,3 +167,7 @@ hr {
   text-align: center;
   padding-bottom: 3vh !important;
 }
+
+#ship-view-890 > .ship-title > .ship-title-bg {
+  font-size: 20vw;
+}
