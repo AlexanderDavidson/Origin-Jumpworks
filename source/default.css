@@ -154,6 +154,20 @@ hr {
   padding-bottom: 3vh !important;
 }
 
+/* ============ 300 Base Ships ============ */
+#ship-view-300base {
+  background-color: rgb(115, 115, 140);
+  height: 45vh;
+}
+
+#ship-info-300base {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-bottom: 3vh !important;
+}
+
 /* ============ 890 ============ */
 #ship-view-890 {
   background-color: rgb(115, 115, 140);
