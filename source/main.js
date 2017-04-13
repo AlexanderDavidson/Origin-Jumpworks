@@ -193,3 +193,11 @@ var baseShips = [
     modalFlavorText: 'Since the dawn of civilization, Humans have striven to build faster machines. Now, ORIGIN presents the culmination of that effort: the ORIGIN 350r. The combination of a Gangleri BP 707 Standard powerplant with a 300i fuselate re-engineered to ac- commodate twin Hammer Propulsion HM 4.3 thrusters makes the 350r the fastest personal craft you’ll ever call your own.'
   },
 ]
+
+$(document).ready(function(){
+  $('#ship-view-85x').mousemove(function(e){
+    var x = -(e.pageX + this.offsetLeft) / 60;
+    var y = -(e.pageY + this.offsetTop) / 60;
+    $(this).css('background-position', x + 'px ' + y + 'px');
+  });
+});

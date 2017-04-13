@@ -4,6 +4,11 @@ a {
   color: #a3dde2 !important;
 }
 
+.shuttle-divider {
+  background-color: black !important;
+  border-radius: 0 !important;
+}
+
 .row {
   padding: 0 !important;
 }
@@ -114,10 +119,12 @@ hr {
 }
 
 .table tr {
+  background-color: black !important;
   transition: background-color 0.6s ease-out;
 }
+
 .table tr td:hover {
-  background-color: rgba(51, 51, 51, 0.46) !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
   transition: background-color 0.6s ease-in;
 }
 
@@ -134,7 +141,11 @@ hr {
 }
 
 #ship-view-85x {
-  background-color: rgb(115, 115, 140);
+  overflow: hidden;
+  background-image: url(../assets/ships/85x/ship_img_85x_top.jpg);
+  width: 80%;
+  background-size: 110% 110%;
+  background-repeat: no-repeat;
   height: 50vh;
 }
 
@@ -142,8 +153,14 @@ hr {
   font-family: 'Josefin Sans', sans-serif;
   background-color: black;
   color: white;
+  padding-bottom: 10vh !important;
   text-align: center;
-  padding-bottom: 3vh !important;
+}
+
+#ship-info-85x p {
+  left: auto;
+  right: auto;
+  text-align: justify;
 }
 
 /* ============ M50 ============ */
@@ -157,7 +174,7 @@ hr {
   background-color: black;
   color: white;
   text-align: center;
-  padding-bottom: 3vh !important;
+  padding-bottom: 10vh !important;
 }
 
 /* ============ 300 Base Ships ============ */
@@ -170,7 +187,7 @@ hr {
   background-color: black;
   color: white;
   text-align: center;
-  padding-bottom: 3vh !important;
+  padding-bottom: 10vh !important;
 }
 
 /* accordion slider */
@@ -248,7 +265,7 @@ hr {
   background-color: black;
   color: white;
   text-align: center;
-  padding-bottom: 3vh !important;
+  padding-bottom: 10vh !important;
 }
 
 #ship-view-350r > .ship-title > .ship-title-bg {
@@ -266,7 +283,7 @@ hr {
   background-color: black;
   color: white;
   text-align: center;
-  padding-bottom: 3vh !important;
+  padding-bottom: 10vh !important;
 }
 
 #ship-view-890 > .ship-title > .ship-title-bg {
