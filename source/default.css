@@ -231,6 +231,24 @@ hr {
   font-size: 5em;
 }
 
+/* ============ 350r ============ */
+#ship-view-350r {
+  background-color: rgb(115, 115, 140);
+  height: 45vh;
+}
+
+#ship-info-350r {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-bottom: 3vh !important;
+}
+
+#ship-view-350r > .ship-title > .ship-title-bg {
+  font-size: 45vh;
+}
+
 /* ============ 890 ============ */
 #ship-view-890 {
   background-color: rgb(115, 115, 140);
