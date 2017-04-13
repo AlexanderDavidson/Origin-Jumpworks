@@ -157,7 +157,7 @@ hr {
   overflow: hidden;
   background-image: url(../assets/ships/85x/ship_img_85x_top.jpg);
   width: 80%;
-  background-size: 110% 110%;
+  background-size: auto 145%;
   background-repeat: no-repeat;
   height: 50vh;
 }
