@@ -7,6 +7,7 @@ a {
 .shuttle-divider {
   background-color: black !important;
   border-radius: 0 !important;
+  margin: 0 !important;
 }
 
 .row {
@@ -20,6 +21,10 @@ a {
 hr {
   width: 30%;
   margin-bottom: 2em;
+}
+
+.spacer {
+  height: 15vh;
 }
 
 .ship-title {
