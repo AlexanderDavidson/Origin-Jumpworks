@@ -1,7 +1,7 @@
 /* ============ Globals ============ */
 
 a {
-  color: rgb(115, 115, 140) !important;
+  color: #a3dde2 !important;
 }
 
 .row {
@@ -26,10 +26,24 @@ hr {
 
 .ship-title-bg {
   font-size: 50vh;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.36) 3%, rgba(0, 0, 0, 1) 68%, rgba(0, 0, 0, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.36) 3%, rgba(0, 0, 0, 1) 68%, rgba(0, 0, 0, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: filter 0.2s ease-out;
+}
+
+.ship-title-bg:hover {
+  filter: blur(12px);
+  transition: filter 0.6s ease-in;
 }
 
 .ship-title-sm {
   font-size: 0.6em;
+}
+
+.ship-img {
+  width: 100%;
 }
 
 .flavor-title {
@@ -56,52 +70,20 @@ hr {
   font-family: 'Josefin Sans', sans-serif !important;
 }
 
-.accordion div:nth-child(1) {
-  background-color: #171717;
+.accordion div:nth-child(odd) {
+  background-color: black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
-.accordion div:nth-child(2) {
-  background-color: #3f3f3f;
+.accordion div:nth-child(odd):hover {
+  background-color: black;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
-.accordion div:nth-child(3) {
-  background-color: #2e2e2e;
-}
-
-.accordion div:nth-child(4) {
-  background-color: #3f3f3f;
-}
-
-.accordion div:nth-child(5) {
-  background-color: #454545;
-}
-
-.accordion div:nth-child(6) {
-  background-color: #3f3f3f;
-}
-
-.accordion div:nth-child(7) {
-  background-color: #2e2e2e;
-}
-
-.accordion div:nth-child(8) {
-  background-color: #3f3f3f;
-}
-
-.accordion div:nth-child(9) {
-  background-color: #171717;
-}
-
-.accordion div:nth-child(10) {
-  background-color: #3f3f3f;
-}
-
-.accordion div:nth-child(6) > h2 {
-  padding: 1em !important;
-}
-
-.accordion div:nth-child(10) > h2 {
-  padding: 1em !important;
+.accordion div:nth-child(even) {
+  background-color: black;
 }
 
 .accordion > .title {
@@ -127,9 +109,16 @@ hr {
 }
 
 /* ============ 85x ============ */
+#ship-grid-85x {
+  background-image: url(../assets/ships/85x/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
 #ship-view-85x {
   background-color: rgb(115, 115, 140);
-  height: 45vh;
+  height: 50vh;
 }
 
 #ship-info-85x {
