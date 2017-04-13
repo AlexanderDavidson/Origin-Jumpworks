@@ -357,9 +357,17 @@ hr {
 }
 
 /* ============ 890 ============ */
+#ship-grid-890 {
+  background-image: url(../assets/ships/890/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
 #ship-view-890 {
-  background-color: rgb(115, 115, 140);
-  height: 45vh;
+  background-image: url(../assets/ships/890/890bg.jpg);
+  background-size: cover;
+  height: 49vh;
 }
 
 #ship-info-890 {
