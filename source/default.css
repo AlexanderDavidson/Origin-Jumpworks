@@ -25,7 +25,7 @@ hr {
 }
 
 .ship-title-bg {
-  font-size: 30vw;
+  font-size: 50vh;
 }
 
 .ship-title-sm {
@@ -204,8 +204,8 @@ hr {
 }
 
 /* Reduce with of un-hovered elements */
-.ships-slider ul:hover li { width: 10vw; }
-.ships-slider ul li:hover { width: 60vw; }
+
+.ships-slider ul li:hover { width: 40vw; }
 
 .ships-slider li img {
   display: block;
