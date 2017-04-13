@@ -148,7 +148,7 @@ hr {
 .img-btns {
   position: absolute;
   right: 1em;
-  top: 13%;
+  top: 0;
   width: 5%;
   height: inherit;
   overflow: scroll;
@@ -200,7 +200,7 @@ hr {
 #ship-view-m50 {
   background-image: url(../assets/ships/m50/ship_img_m50_angle.jpg);
   background-size: cover;
-  height: 45vh;
+  height: 50vh;
 }
 
 #ship-info-m50 {
@@ -318,9 +318,17 @@ hr {
 }
 
 /* ============ 350r ============ */
+#ship-grid-350r {
+  background-image: url(../assets/ships/350r/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
 #ship-view-350r {
-  background-color: rgb(115, 115, 140);
-  height: 45vh;
+  background-image: url(../assets/ships/350r/350r-top.jpg);
+  background-size: cover;
+  height: 70vh;
 }
 
 #ship-info-350r {
@@ -332,7 +340,20 @@ hr {
 }
 
 #ship-view-350r > .ship-title > .ship-title-bg {
-  font-size: 45vh;
+  font-size: 29vh;
+}
+
+.img-btns-350r {
+  position: absolute;
+  right: 1em;
+  top: 16%;
+  width: 5%;
+  height: inherit;
+  overflow: scroll;
+}
+
+.img-btns-350r > button {
+  margin-top: 1em !important;
 }
 
 /* ============ 890 ============ */
