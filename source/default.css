@@ -212,6 +212,24 @@ hr {
 }
 
 /* ============ 300 Base Ships ============ */
+#ship-grid-300base {
+  background-image: url(../assets/ships/ship300series/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.img-btns-300base {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1.5em;
+}
+
+.img-btns-300base > button {
+  margin-left: 0.5em !important;
+  margin-right: 0.5em !important;
+}
+
 #ship-view-300base {
   background-color: rgb(115, 115, 140);
 }
@@ -250,42 +268,53 @@ hr {
   display: block;
   width: 9vw;
   float: left;
+  z-index: 10;
 
   /* Transitions to give animation effect */
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
 
   /* If you hover on the images now you should be able to
 	see the basic accordian */
 }
 
 /* Reduce with of un-hovered elements */
+.ships-slider {
+  box-shadow: 0px 0px 20px 3px rgb(0, 0, 0);
+}
 
 .ships-slider ul li:hover { width: 40vw; }
 
 .ships-slider li img {
   display: block;
   width: 60vw;
+  box-shadow: 0px 0px 20px 3px rgb(0, 0, 0);
 }
 
 /* Image title styles */
 .image_title {
   font-family: 'Josefin Sans', sans-serif;
-  background: rgba(0, 0, 0, 0.5);
+  background: black;
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100;
+  padding-top: 1em;
+  padding-left: 0.2em;
+  bottom: 3em;
+  width: 20em;
+  height: 4em;
 }
 
 .image_title a {
   display: block;
   color: white !important;
   color: #fff;
-  text-decoration: none;
-  padding: 20px;
-  font-size: 5em;
+  font-size: 7em;
+}
+
+.image_title button {
+  position: absolute;
+  left: 18em;
+  top: 4em;
 }
 
 /* ============ 350r ============ */
