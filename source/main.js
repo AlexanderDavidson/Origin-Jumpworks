@@ -201,3 +201,13 @@ $(document).ready(function(){
     $(this).css('background-position', x + 'px ' + y + 'px');
   });
 });
+
+// var parallax85x = document.getElementById("ship-view-85x")
+//
+// parallax85x.onmousemove = function(event) {img85xParallax(event)};
+//
+// function img85xParallax(e) {
+//   var x = -(e.pageX + this.offsetLeft) / 60;
+//   var y = -(e.pageY + this.offsetTop) / 60;
+//   parallax85x.setAttribute('background-position', x + 'px ' + y + 'px')
+// }
