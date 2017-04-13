@@ -142,7 +142,20 @@ hr {
 }
 
 .ten {
-  box-shadow: 0px 8px 20px 15px rgba(0, 0, 0, 0.33), 0 8px 20px 3px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 0px 20px 3px rgb(0, 0, 0);
+}
+
+.img-btns {
+  position: absolute;
+  right: 1em;
+  top: 13%;
+  width: 5%;
+  height: inherit;
+  overflow: scroll;
+}
+
+.img-btns > button {
+  margin-top: 1em !important;
 }
 
 /* ============ 85x ============ */
@@ -177,8 +190,16 @@ hr {
 }
 
 /* ============ M50 ============ */
+#ship-grid-m50 {
+  background-image: url(../assets/ships/m50/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
 #ship-view-m50 {
-  background-color: rgb(115, 115, 140);
+  background-image: url(../assets/ships/m50/ship_img_m50_angle.jpg);
+  background-size: cover;
   height: 45vh;
 }
 

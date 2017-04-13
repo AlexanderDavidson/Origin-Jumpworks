@@ -1,5 +1,5 @@
 $('.ui.accordion')
-  .accordion()
+  .accordion('refresh')
 ;
 
 $('.ui.dropdown')
@@ -12,18 +12,21 @@ $('.ui.modal')
 
 $('.ui.embed').embed();
 
-// $('.ui.sticky')
-//   .sticky({
-//     context: '#ship-m50',
-//     pushing: true
+// ISSUE -items not unbluring on scroll up
+
+// $('.img-btns, .ship-title-bg, .flavor-title, .info')
+//   .visibility({
+//     once       : false,
+//     continuous : true,
+//     onPassing  : function(calculations) {
+//       var iconBlur = 'blur(' + calculations.pixelsPassed/3 + 'px)';
+//       $(this)
+//         .css('filter', iconBlur)
+//       ;
+//     }
 //   })
 // ;
-//
-// $(document).ready(function(){
-//      $('#modal-350r-button').click(function(){
-//         $('#modal-350r').modal('show');
-//      });
-// });
+
 
 // ----- Ship Variables -----
 
