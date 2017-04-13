@@ -1,7 +1,13 @@
 /* ============ Globals ============ */
 
 a {
-  color: rgb(115, 115, 140) !important;
+  color: #a3dde2 !important;
+}
+
+.shuttle-divider {
+  background-color: black !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
 }
 
 .row {
@@ -17,6 +23,10 @@ hr {
   margin-bottom: 2em;
 }
 
+.spacer {
+  height: 15vh;
+}
+
 .ship-title {
   font-family: 'Josefin Sans', sans-serif;
   color: black;
@@ -26,10 +36,24 @@ hr {
 
 .ship-title-bg {
   font-size: 50vh;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.36) 3%, rgba(0, 0, 0, 1) 68%, rgba(0, 0, 0, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.36) 3%, rgba(0, 0, 0, 1) 68%, rgba(0, 0, 0, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: filter 0.2s ease-out;
+}
+
+.ship-title-bg:hover {
+  filter: blur(12px);
+  transition: filter 0.6s ease-in;
 }
 
 .ship-title-sm {
   font-size: 0.6em;
+}
+
+.ship-img {
+  width: 100%;
 }
 
 .flavor-title {
@@ -48,6 +72,7 @@ hr {
   width: 50%;
   padding-left: 4em;
   overflow: auto;
+  text-align: justify;
 }
 
 .accordion {
@@ -56,52 +81,22 @@ hr {
   font-family: 'Josefin Sans', sans-serif !important;
 }
 
-.accordion div:nth-child(1) {
-  background-color: #171717;
+.accordion div:nth-child(odd) {
+  background-color: black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
-.accordion div:nth-child(2) {
-  background-color: #3f3f3f;
+.accordion div:nth-child(odd):hover {
+  background-color: black;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
-.accordion div:nth-child(3) {
-  background-color: #2e2e2e;
-}
-
-.accordion div:nth-child(4) {
-  background-color: #3f3f3f;
-}
-
-.accordion div:nth-child(5) {
-  background-color: #454545;
-}
-
-.accordion div:nth-child(6) {
-  background-color: #3f3f3f;
-}
-
-.accordion div:nth-child(7) {
-  background-color: #2e2e2e;
-}
-
-.accordion div:nth-child(8) {
-  background-color: #3f3f3f;
-}
-
-.accordion div:nth-child(9) {
-  background-color: #171717;
-}
-
-.accordion div:nth-child(10) {
-  background-color: #3f3f3f;
-}
-
-.accordion div:nth-child(6) > h2 {
-  padding: 1em !important;
-}
-
-.accordion div:nth-child(10) > h2 {
-  padding: 1em !important;
+.accordion div:nth-child(even) {
+  background-color: black;
+  padding-top: 2em !important;
+  padding-bottom: 4em !important;
 }
 
 .accordion > .title {
@@ -113,6 +108,7 @@ hr {
 .accordion > .content > h2 {
   color: white !important;
   font-family: 'Josefin Sans', sans-serif !important;
+  padding-left: 1em;
 }
 
 .accordion > .content > .table {
@@ -126,18 +122,58 @@ hr {
   padding-left: 1em;
 }
 
+.table tr:hover {
+  background-color: rgba(51, 51, 51, 0.46) !important;
+  transition: background-color 0.6s ease-in;
+}
+
+.table tr {
+  background-color: black !important;
+  transition: background-color 0.6s ease-out;
+}
+
+.table tr td:hover {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  transition: background-color 0.6s ease-in;
+}
+
+.table tr td {
+  transition: background-color 0.6s ease-out;
+}
+
+.ten {
+  box-shadow: 0px 8px 20px 15px rgba(0, 0, 0, 0.33), 0 8px 20px 3px rgba(0, 0, 0, 0.43);
+}
+
 /* ============ 85x ============ */
+#ship-grid-85x {
+  background-image: url(../assets/ships/85x/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
 #ship-view-85x {
-  background-color: rgb(115, 115, 140);
-  height: 45vh;
+  overflow: hidden;
+  background-image: url(../assets/ships/85x/ship_img_85x_top.jpg);
+  width: 80%;
+  background-size: auto 145%;
+  background-repeat: no-repeat;
+  height: 50vh;
 }
 
 #ship-info-85x {
   font-family: 'Josefin Sans', sans-serif;
   background-color: black;
   color: white;
+  padding-bottom: 10vh !important;
   text-align: center;
-  padding-bottom: 3vh !important;
+}
+
+#ship-info-85x p {
+  left: auto;
+  right: auto;
+  text-align: justify;
 }
 
 /* ============ M50 ============ */
@@ -151,7 +187,7 @@ hr {
   background-color: black;
   color: white;
   text-align: center;
-  padding-bottom: 3vh !important;
+  padding-bottom: 10vh !important;
 }
 
 /* ============ 300 Base Ships ============ */
@@ -164,7 +200,7 @@ hr {
   background-color: black;
   color: white;
   text-align: center;
-  padding-bottom: 3vh !important;
+  padding-bottom: 10vh !important;
 }
 
 /* accordion slider */
@@ -242,7 +278,7 @@ hr {
   background-color: black;
   color: white;
   text-align: center;
-  padding-bottom: 3vh !important;
+  padding-bottom: 10vh !important;
 }
 
 #ship-view-350r > .ship-title > .ship-title-bg {
@@ -260,7 +296,7 @@ hr {
   background-color: black;
   color: white;
   text-align: center;
-  padding-bottom: 3vh !important;
+  padding-bottom: 10vh !important;
 }
 
 #ship-view-890 > .ship-title > .ship-title-bg {
