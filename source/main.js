@@ -320,7 +320,7 @@ var $quoteModal = document.querySelector('#quote-modal')
 var $paintName = document.querySelector('#quote-info-color-name')
 var $quoteShipName = document.querySelector('#quote-ship-name')
 
-function findShip(shipsInfo, shipId) {
+function findShip(baseShips, shipId) {
   for (var i = 0; i < shipsInfo.length; i++) {
     if (shipsInfo[i].id === shipId) {
       return shipsInfo[i]
@@ -348,21 +348,21 @@ function quoteInfoStep(ship) {
 
 }
 
-function clearQuoteModal () {
-  $quoteModal.innerHTML = ""
-  $quoteShipImg.innerHTML = ""
-  $paintName.innerHTML = ""
-  $quoteShipName.innerHTML = ""
-}
+// function clearQuoteModal () {
+//   $quoteModal.innerHTML = ""
+//   $quoteShipImg.innerHTML = ""
+//   $paintName.innerHTML = ""
+//   $quoteShipName.innerHTML = ""
+// }
 
 // ------
 document.addEventListener('DOMContentLoaded', function(event) {
   event.preventDefault()
 
   $quoteButton.addEventListener('click', function (event) {
-    if (event.target.tagName !== 'BUTTON') {
-      return
-    }
+    // if (event.target.className !== 'quote-button') {
+    //   return
+    // }
     var shipId = event.target.getAttribute('info-ship-id')
     var ship = findShip(shipsInfo, shipId)
 
