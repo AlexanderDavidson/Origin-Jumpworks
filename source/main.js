@@ -316,10 +316,9 @@ var $quoteButton = document.querySelector('.quote-button')
 
 
 
-var $quoteModal = document.getElementById('#quote-modal')
-var $paintName = document.getElementById('#quote-info-color-name')
-var $quoteShipImg = document.getElementById('#quote-ship-img')
-var $quoteShipName = document.getElementById('#quote-ship-name')
+var $quoteModal = document.querySelector('#quote-modal')
+var $paintName = document.querySelector('#quote-info-color-name')
+var $quoteShipName = document.querySelector('#quote-ship-name')
 
 function findShip(shipsInfo, shipId) {
   for (var i = 0; i < shipsInfo.length; i++) {
@@ -329,13 +328,14 @@ function findShip(shipsInfo, shipId) {
   }
 }
 
-function quoteShipImg(ship) {
-  var $img = document.createElement('img')
-  $img.setAttribute('src', ship.quoteImg)
-  $quoteShipImg.appendChild($img)
-
-  return $img
-}
+// function quoteShipImg(ship) {
+//   var $quoteShipImg = document.querySelector('#quote-ship-img')
+//   var $img = document.createElement('img')
+//   $img.setAttribute('src', ship.quoteImg)
+//   $quoteShipImg.appendChild($img)
+//
+//   return $img
+// }
 
 // $quoteShipName.id = shipsInfo[i].id
 // $quoteShipName.textContent = shipsInfo[i].name
@@ -367,8 +367,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     var ship = findShip(shipsInfo, shipId)
 
     // SHIP IMAGE
-    $quoteShipImg.innerHTML = ""
-    $quoteShipImg.appendChild(quoteShipImg(ship))
+    var $img = document.querySelector('#quote-ship-img')
+    $img.src = ''
+    $img.src = ship.quoteImg
+    $img.classList = ''
+    $img.classList.add(ship.id)
     // SHIP NAME
     $quoteShipName.textContent = ""
     $quoteShipName.textContent = ship.name

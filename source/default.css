@@ -211,11 +211,7 @@ hr {
   padding-bottom: 10vh !important;
 }
 
-#quote-ship-img-m50 img {
-  position: absolute;
-  top: -4vh;
-  left: -5vw;
-}
+
 
 /* ============ 300 Base Ships ============ */
 #ship-grid-300base {
@@ -395,6 +391,19 @@ hr {
   background-image: url(../assets/quote_bg2.jpg);
   background-size: cover;
   background-position: center center;
+}
+
+.id85x {
+  position: absolute;
+  width: 108%;
+  top: -8vh;
+  left: 15vw;
+}
+
+.idM50 {
+  position: absolute;
+  top: -4vh;
+  left: -5vw;
 }
 
 #quote-ship-name {
