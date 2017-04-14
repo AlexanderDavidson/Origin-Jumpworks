@@ -211,6 +211,25 @@ hr {
   padding-bottom: 10vh !important;
 }
 
+#quote-ship-img-m50 img {
+  position: absolute;
+  top: -4vh;
+  left: -5vw;
+}
+
+#quote-ship-name-m50 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: transparent;
+  font-size: 10vw;
+  width: 100%;
+  padding-left: 65%;
+  background: url(../assets/quote_bg2.jpg) repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: hue-rotate(-20deg) brightness(3) drop-shadow(4px 4px 8px black);
+  -webkit-background-clip: text;
+}
+
 /* ============ 300 Base Ships ============ */
 #ship-grid-300base {
   background-image: url(../assets/ships/ship300series/bg.jpg);
@@ -385,7 +404,10 @@ hr {
 .quote-img {
   height: 40vh;
   width: 100%;
-  background-color: grey;
+  background-image: url(../assets/quote_bg2.jpg);
+  background-size: cover;
+  background-position: center center;
+  /*background-color: grey;*/
 }
 
 .quote-step {
@@ -393,30 +415,31 @@ hr {
   font-size: 1.5em;
   height: 5vh;
   width: 100%;
-  background-color: red;
+  background-color: black;
 }
 
-#quote-ship-step div {
+.quote-ship-step div {
   text-align: center;
 }
 
-#quote-step-indicator-name {
+.quote-step-indicator-name {
   position: relative;
   top: -1.5em;
   color: black;
 }
-#quote-step-indicator-name a {
-  color: black !important;
+
+.quote-step-indicator-name a {
+  color: white !important;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
 
-#quote-step-indicator-icon {
+.quote-step-indicator-icon {
   position: relative;
   top: -0.5em;
 }
 
-#quote-step-indicator-icon i {
+.quote-step-indicator-icon i {
   padding-left: 2.8em;
   padding-right: 2.8em;
   color: white;
@@ -424,14 +447,33 @@ hr {
 
 .quote-info {
   font-family: 'Josefin Sans', sans-serif;
+  color: white;
   height: 20vh;
   width: 100%;
   background-color: black;
+  border-bottom: 1px solid white;
 }
 
 .quote-summary {
   font-family: 'Josefin Sans', sans-serif;
   height: 10vh;
   width: 100%;
-  background-color: purple;
+  background-color: black;
+  color: white;
+}
+
+.quote-summary-info {
+  padding-left: 2%;
+  padding-top: 4vh;
+}
+
+.quote-summary-info span {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.quote-summary-button {
+  position: absolute;
+  right: 4%;
+  bottom: 4%;
 }

@@ -12,6 +12,12 @@ $('.ui.quote.large.modal')
 
 $('.ui.embed').embed();
 
+$(document).ready(function(){
+  $("#ship-m50-btn-quote").click(function(){
+  $('.ui.quote.large.modal').modal('show');
+  });
+});
+
 // ISSUE -items not unbluring on scroll up
 
 // $('.img-btns, .ship-title-bg, .flavor-title, .info')
@@ -236,41 +242,64 @@ var baseShips = [
 ]
 // ======================================================================================================
 
-function findBaseShip(baseShips, shipId) {
-  for (var i = 0; i < baseShips.length; i++) {
-    if (baseShips[i].id === shipId) {
-      return baseShips[i]
-    }
-  }
-}
-
-function showView($views, viewId) {
-  for (var i = 0; i < $views.children.length; i++) {
-    var $view = $views.children[i]
-    if ($view.id === viewId) {
-      $view.classList.remove('hidden')
-    }
-    else {
-      $view.classList.add('hidden')
-    }
-  }
-}
-
-var $quoteImg = document.getElementById("quote-ship-img")
-var $quoteStep = document.getElementById("quote-ship-step")
-var $quoteInfo = document.getElementById("quote-info")
-var $quoteSummary = document.getElementById("quote-summary")
-
-function renderShipDetails(ship) {
-  $quoteImg
-}
-
-$(document).ready(function(){
-  $("#ship-m50-btn-quote").click(function(){
-  $('.ui.quote.large.modal').modal('show');
-  });
-});
-
+// var $m50QuoteBtn = document.getElementById("ship-m50-btn-quote")
+//
+// var $quote = document.getElementById("quote")
+// var $quoteImg = document.getElementById("quote-ship-img")
+// var $quoteStep = document.getElementById("quote-ship-step")
+// var $quoteInfo = document.getElementById("quote-info")
+// var $quoteSummary = document.getElementById("quote-summary")
+//
+//
+// function findShip(shipsInfo, shipId) {
+//   for (var i = 0; i < shipsInfo.length; i++) {
+//     if (shipsInfo[i].id === shipId) {
+//       return shipsInfo[i]
+//     }
+//   }
+// }
+//
+// function renderShipDetails(ship) {
+//   var $imgDiv = document.createElement('img')
+//   $imgDiv.setAttribute('src', shipsInfo.quoteImg)
+//   $quoteImg.appendChild($imgDiv)
+//   return $imgDiv
+// }
+//
+// function showView($quote, viewId) {
+//   for (var i = 0; i < $quote.children.length; i++) {
+//     var $view = $quote.children[i]
+//     if ($view.id === viewId) {
+//       $view.classList.add('current-ship-quote')
+//     }
+//     else {
+//       $view.classList.remove('current-ship-quote')
+//     }
+//   }
+// }
+//
+//
+// $m50QuoteBtn.addEventListener('click', function (event) {
+//     if (event.target.tagName !== 'BUTTON') {
+//       return
+//     }
+//     renderShipDetails(ship)
+//
+//     var shipId = event.target.getAttribute('data-ship-id')
+//     var ship = findShip(shipsInfo, shipId)
+//     // showView($views, 'quote-form')
+//     var $specsSwap = document.querySelector('#specifications')
+//     $specsSwap.innerHTML = ''
+//     $specsSwap.appendChild(renderSpecs(ship))
+//
+//     $quoteImg.src = ship.orderFrontView
+//
+//     var $formRowModel = document.getElementById('quote-model')
+//     $formRowModel.textContent = ship.name
+//
+//
+//   })
+//
 
 // ======================================================================================================
 $(document).ready(function(){
