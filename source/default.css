@@ -151,7 +151,7 @@ hr {
   top: 0;
   width: 5%;
   height: inherit;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 
 .img-btns > button {
@@ -349,14 +349,13 @@ hr {
   top: 16%;
   width: 5%;
   height: inherit;
-  overflow: scroll;
 }
 
 .img-btns-350r > button {
   margin-top: 1em !important;
 }
 
-/* ============ 890 ============ */
+
 #ship-grid-890 {
   background-image: url(../assets/ships/890/bg.jpg);
   background-size: cover;
@@ -380,4 +379,59 @@ hr {
 
 #ship-view-890 > .ship-title > .ship-title-bg {
   font-size: 20vw;
+}
+
+/* ============ QUOTE MODAL ============ */
+.quote-img {
+  height: 40vh;
+  width: 100%;
+  background-color: grey;
+}
+
+.quote-step {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  height: 5vh;
+  width: 100%;
+  background-color: red;
+}
+
+#quote-ship-step div {
+  text-align: center;
+}
+
+#quote-step-indicator-name {
+  position: relative;
+  top: -1.5em;
+  color: black;
+}
+#quote-step-indicator-name a {
+  color: black !important;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+#quote-step-indicator-icon {
+  position: relative;
+  top: -0.5em;
+}
+
+#quote-step-indicator-icon i {
+  padding-left: 2.8em;
+  padding-right: 2.8em;
+  color: white;
+}
+
+.quote-info {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 20vh;
+  width: 100%;
+  background-color: black;
+}
+
+.quote-summary {
+  font-family: 'Josefin Sans', sans-serif;
+  height: 10vh;
+  width: 100%;
+  background-color: purple;
 }

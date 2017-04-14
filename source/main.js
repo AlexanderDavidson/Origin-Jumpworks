@@ -6,8 +6,8 @@ $('.ui.dropdown')
   .dropdown()
 ;
 
-$('.ui.modal')
-  .modal('show')
+$('.ui.quote.large.modal')
+  .modal()
 ;
 
 $('.ui.embed').embed();
@@ -29,6 +29,44 @@ $('.ui.embed').embed();
 
 
 // ----- Ship Variables -----
+
+var shipsInfo = [
+  {
+    name: '85x',
+    basePrice: 50000,
+    quoteImg: '../assets/ships/85x/quote_img.png'
+  },
+  {
+    name: 'M50',
+    basePrice: 100000,
+    quoteImg: '../assets/ships/m50/quote_img.png'
+  },
+  {
+    name: '300i',
+    basePrice: 55000,
+    quoteImg: '../assets/ships/ship300series/quote_img_300i.png'
+  },
+  {
+    name: '315p',
+    basePrice: 65000,
+    quoteImg: '../assets/ships/ship300series/quote_img_315p.png'
+  },
+  {
+    name: '325a',
+    basePrice: 70000,
+    quoteImg: '../assets/ships/ship300series/quote_img_325a.png'
+  },
+  {
+    name: '350r',
+    basePrice: 125000,
+    quoteImg: '../assets/ships/350r/quote_img.png'
+  },
+  {
+    name: '890 Jump',
+    basePrice: 900000,
+    quoteImg: '../assets/ships/890/quote_img.png'
+  }
+]
 
 var baseShips = [
   {
@@ -217,6 +255,21 @@ function showView($views, viewId) {
     }
   }
 }
+
+var $quoteImg = document.getElementById("quote-ship-img")
+var $quoteStep = document.getElementById("quote-ship-step")
+var $quoteInfo = document.getElementById("quote-info")
+var $quoteSummary = document.getElementById("quote-summary")
+
+function renderShipDetails(ship) {
+  $quoteImg
+}
+
+$(document).ready(function(){
+  $("#ship-m50-btn-quote").click(function(){
+  $('.ui.quote.large.modal').modal('show');
+  });
+});
 
 
 // ======================================================================================================
