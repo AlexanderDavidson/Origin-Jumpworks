@@ -7,13 +7,19 @@ $('.ui.dropdown')
 ;
 
 $('.ui.quote.large.modal')
+  .modal({
+    observeChanges: true,
+    inverted: false
+    transition:
+  })
   .modal('refresh')
 ;
 
 $('.ui.embed').embed();
 
 $(document).ready(function(){
-  $("#ship-m50-btn-quote").click(function(){
+  // need way to dynamically choose which button was chosen
+  $(".quote-button").click(function(){
   $('.ui.quote.large.modal').modal('show');
   });
 });
@@ -39,36 +45,43 @@ $(document).ready(function(){
 var shipsInfo = [
   {
     name: '85x',
+    id: 'id85x',
     basePrice: 50000,
     quoteImg: '../assets/ships/85x/quote_img.png'
   },
   {
     name: 'M50',
+    id: 'idM50',
     basePrice: 100000,
     quoteImg: '../assets/ships/m50/quote_img.png'
   },
   {
     name: '300i',
+    id: 'id300i',
     basePrice: 55000,
     quoteImg: '../assets/ships/ship300series/quote_img_300i.png'
   },
   {
     name: '315p',
+    id: 'id315p',
     basePrice: 65000,
     quoteImg: '../assets/ships/ship300series/quote_img_315p.png'
   },
   {
     name: '325a',
+    id: 'id325a',
     basePrice: 70000,
     quoteImg: '../assets/ships/ship300series/quote_img_325a.png'
   },
   {
     name: '350r',
+    id: 'id350r',
     basePrice: 125000,
     quoteImg: '../assets/ships/350r/quote_img.png'
   },
   {
     name: '890 Jump',
+    id: 'id890',
     basePrice: 900000,
     quoteImg: '../assets/ships/890/quote_img.png'
   }
@@ -300,7 +313,87 @@ var baseShips = [
 //
 //   })
 //
+var $quoteButton = document.querySelector('.quote-button')
 
+
+
+var $quoteModal = document.getElementById('#quote-modal')
+var $paintName = document.getElementById('#quote-info-color-name')
+var $quoteShipImg = document.getElementById('#quote-ship-img')
+var $quoteShipName = document.getElementById('#quote-ship-name')
+
+function findShip(shipsInfo, shipId) {
+  for (var i = 0; i < shipsInfo.length; i++) {
+    if (shipsInfo[i].id === shipId) {
+      return shipsInfo[i]
+    }
+  }
+}
+
+function quoteShipImg(ship) {
+  var $img = document.createElement('img')
+  $img.setAttribute('src', ship.quoteImg)
+  $quoteShipImg.appendChild($img)
+
+  return $img
+}
+
+// $quoteShipName.id = shipsInfo[i].id
+// $quoteShipName.textContent = shipsInfo[i].name
+
+function renderQuote(ship) {
+  // $quoteButton.setAttribute('info-ship-id', ship.id)
+}
+
+function quoteInfoStep(ship) {
+
+}
+
+function clearQuoteModal () {
+  $quoteModal.innerHTML = ""
+  $quoteShipImg.innerHTML = ""
+  $paintName.innerHTML = ""
+  $quoteShipName.innerHTML = ""
+}
+
+// ------
+document.addEventListener('DOMContentLoaded', function(event) {
+  event.preventDefault()
+
+  $quoteButton.addEventListener('click', function (event) {
+    if (event.target.tagName !== 'BUTTON') {
+      return
+    }
+    var shipId = event.target.getAttribute('info-ship-id')
+    var ship = findShip(shipsInfo, shipId)
+
+    // SHIP IMAGE
+    $quoteShipImg.innerHTML = ""
+    $quoteShipImg.appendChild(quoteShipImg(ship))
+    // SHIP NAME
+    $quoteShipName.textContent = ""
+    $quoteShipName.textContent = ship.name
+    // STEPPER / WIZARD ICON SWAPPER
+
+    // INFO WIZARD SWITCHER
+      // PAINT SELECTOR
+        // SELECTED PAINT NAME
+      // UPHOLSTERY SELECTOR
+      // LOCATION SELECTOR
+      // SUMMARY SELECTOR
+
+    // SUMMARY MODEL NAME
+
+    // SUMMARY PRICE
+
+    // NEXT BUTTON / REQUEST QUOTE BUTTON
+  })
+})
+
+
+// NEED TO DYNAMICALLY POPULATE 300 SERIES info
+// NEED TO CREATE BUTTON FUNCTIONALITY FOR OTHER BUTTONS
+//  NEED TO AD FUNCTIONALITY FOR 890 BUTTONS
 // ======================================================================================================
 $(document).ready(function(){
   $('#ship-view-85x').mousemove(function(e){

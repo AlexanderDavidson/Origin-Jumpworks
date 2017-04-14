@@ -217,19 +217,6 @@ hr {
   left: -5vw;
 }
 
-#quote-ship-name-m50 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: transparent;
-  font-size: 10vw;
-  width: 100%;
-  padding-left: 65%;
-  background: url(../assets/quote_bg2.jpg) repeat;
-  background-size: cover;
-  background-position: center center;
-  filter: hue-rotate(-20deg) brightness(3) drop-shadow(4px 4px 8px black);
-  -webkit-background-clip: text;
-}
-
 /* ============ 300 Base Ships ============ */
 #ship-grid-300base {
   background-image: url(../assets/ships/ship300series/bg.jpg);
@@ -401,13 +388,26 @@ hr {
 }
 
 /* ============ QUOTE MODAL ============ */
+
 .quote-img {
   height: 40vh;
   width: 100%;
   background-image: url(../assets/quote_bg2.jpg);
   background-size: cover;
   background-position: center center;
-  /*background-color: grey;*/
+}
+
+#quote-ship-name {
+  font-family: 'Josefin Sans', sans-serif;
+  color: transparent;
+  font-size: 10vw;
+  width: 100%;
+  padding-left: 65%;
+  background: url(../assets/quote_bg2.jpg) repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: hue-rotate(-20deg) brightness(3) drop-shadow(4px 4px 8px black);
+  -webkit-background-clip: text;
 }
 
 .quote-step {
@@ -458,7 +458,7 @@ hr {
   border-bottom: 1px solid white;
 }
 
-.quote-summary {
+#quote-summary {
   font-family: 'Josefin Sans', sans-serif;
   height: 10vh;
   width: 100%;

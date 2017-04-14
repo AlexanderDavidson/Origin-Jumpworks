@@ -48,7 +48,7 @@
               <button class="circular big ui inverted icon button">
                 <i class="icon dashboard"></i>
               </button>
-              <button class="circular big ui inverted icon button">
+              <button class="circular big ui inverted icon button quote-button" info-ship-id="id85x">
                 <i class="icon add to cart"></i>
               </button>
             </div>
@@ -343,7 +343,7 @@
               <button class="circular big ui inverted icon button">
                 <i class="icon dashboard"></i>
               </button>
-              <button class="circular big ui inverted icon button" id="ship-m50-btn-quote">
+              <button class="circular big ui inverted icon button quote-button" id="ship-m50-btn-quote" info-ship-id="idM50">
                 <i class="icon add to cart"></i>
               </button>
             </div>
@@ -615,7 +615,7 @@
             <i class="icon dashboard"></i>
           </button>
           <button class="circular big ui inverted icon button">
-            <i class="icon add to cart"></i>
+            <i class="icon info"></i>
           </button>
         </div>
         <div class="row">
@@ -635,8 +635,8 @@
                 <li>
                   <div class="image_title">
                     <a href="#">300i</a>
-                    <button class="circular mini ui inverted icon button">
-                      <i class="icon info"></i>
+                    <button class="circular mini ui inverted icon button quote-button" info-ship-id="id300i">
+                      <i class="icon add to cart"></i>
                     </button>
                   </div>
                   <a href="#">
@@ -646,8 +646,8 @@
                 <li>
                   <div class="image_title">
                     <a href="#">315p</a>
-                    <button class="circular mini ui inverted icon button">
-                      <i class="icon info"></i>
+                    <button class="circular mini ui inverted icon button quote-button" info-ship-id="id315p">
+                      <i class="icon add to cart"></i>
                     </button>
                   </div>
                   <a href="#">
@@ -657,8 +657,8 @@
                 <li>
                   <div class="image_title">
                     <a href="#">325a</a>
-                    <button class="circular mini ui inverted icon button">
-                      <i class="icon info"></i>
+                    <button class="circular mini ui inverted icon button quote-button" info-ship-id="id325a">
+                      <i class="icon add to cart"></i>
                     </button>
                   </div>
                   <a href="#">
@@ -926,7 +926,7 @@
               <button class="circular big ui inverted icon button">
                 <i class="icon dashboard"></i>
               </button>
-              <button class="circular big ui inverted icon button">
+              <button class="circular big ui inverted icon button quote-button" info-ship-id="id350r">
                 <i class="icon add to cart"></i>
               </button>
             </div>
@@ -1135,9 +1135,6 @@
       </div>
       <div class="spacer"></div>
     </div>
-
-
-
 
     <!-- ============ Divider ============ -->
     <div class="ui inverted segment shuttle-divider">
@@ -1456,15 +1453,15 @@
     </div>
     <!-- ============ Divider ============ -->
 
-    <!-- ============ QUOTE MODAL M50 ============ -->
-    <div class="ui quote large modal hidden" id="quote-m50">
+    <!-- ============ QUOTE MODAL ============ -->
+    <div class="ui quote large modal hidden" id="quote-modal">
       <i class="close icon"></i>
       <div class="quote-ship">
         <!-- SHIP IMAGE -->
         <div class="quote-img">
-          <div id="quote-ship-img-m50">
-            <img src="../assets/ships/m50/quote_img.png" alt="">
-            <div id="quote-ship-name-m50">M50</div>
+          <div id="quote-ship-img">
+          <!-- INSERT SHIP IMAGE -->
+            <div id="quote-ship-name"></div> <!-- INSERT SHIP NAME -->
           </div>
         </div>
         <!-- SHIP STEPPER -->
@@ -1490,53 +1487,66 @@
         </div>
         <!-- SHIP INFO -->
         <div class="quote-info">
-          <div id="quote-info-m50">
-            <div class="paint-name">
-              <div id="quote-info-m50-color-name"></div>
-              <div class="paint-metallic">Metallic</div>
+          <div id="quote-info">
+
+            <!-- COLOR (PAINT) -->
+            <div id="quote-info-paint">
+              <div class="paint-name">
+                <div id="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                <div class="paint-metallic">Metallic</div>
+              </div>
+              <div class="paint-colors">
+                <div class="paint-white">
+                  <img src="../assets/paint/white-paint.jpg" alt="">
+                </div>
+                <div class="paint-grey">
+                  <img src="../assets/paint/silver-paint.jpg" alt="">
+                </div>
+                <div class="paint-red">
+                  <img src="../assets/paint/red-paint.jpg" alt="">
+                </div>
+                <div class="paint-blue">
+                  <img src="../assets/paint/blue-paint.jpg" alt="">
+                </div>
+                <div class="paint-yellow">
+                  <img src="../assets/paint/yellow-paint.jpg" alt="">
+                </div>
+              </div>
             </div>
 
-            <div class="paint-colors">
-              <div class="paint-white">
-                <img src="../assets/paint/white-paint.jpg" alt="">
-              </div>
-              <div class="paint-grey">
-                <img src="../assets/paint/silver-paint.jpg" alt="">
-              </div>
-              <div class="paint-red">
-                <img src="../assets/paint/red-paint.jpg" alt="">
-              </div>
-              <div class="paint-blue">
-                <img src="../assets/paint/blue-paint.jpg" alt="">
-              </div>
-              <div class="paint-yellow">
-                <img src="../assets/paint/yellow-paint.jpg" alt="">
-              </div>
+            <!-- UPHOLSTERY -->
+            <div id="quote-upholstery">
+
+            </div>
+            <!-- LOCATION -->
+            <div id="quote-location">
 
             </div>
 
           </div>
         </div>
+
         <!-- SUMMARY -->
-        <div class="quote-summary">
+        <div id="quote-summary">
           <div class="quote-summary-info">
             <div class="quote-summary-model">
               <span class="model">Model</span>
               <span>|</span>
-              <span class="model-name">M50</span>
+              <span id="model-name"></span> <!-- INSERT MODEL NAME -->
             </div>
             <div class="quote-summary-msrp">
               <span class="msrp">MSRP</span>
               <span>|</span>
-              <span class="uec">¤100,000 UEC</span>
+              <span id="uec"></span> <!-- INSERT PRICE -->
             </div>
           </div>
+          <!-- INSERT CORRECT BUTTON FOR CURRENT STEP -->
           <div class="ui inverted quote-summary-button">
-            <button class="ui inverted black button">Request Quote</button>
+            <!-- INSERT NEXT/REQUEST A QUOTE BUTTON TEXT -->
+            <button id="quote-step-next-button" class="ui inverted black button"></button>
           </div>
-
-
         </div>
+
       </div>
     </div>
 
