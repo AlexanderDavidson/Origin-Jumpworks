@@ -7,7 +7,7 @@ $('.ui.dropdown')
 ;
 
 $('.ui.quote.large.modal')
-  .modal()
+  .modal('refresh')
 ;
 
 $('.ui.embed').embed();

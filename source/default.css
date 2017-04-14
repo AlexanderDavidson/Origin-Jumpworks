@@ -418,6 +418,10 @@ hr {
   background-color: black;
 }
 
+.quote-step hr {
+  width: 70%;
+}
+
 .quote-ship-step div {
   text-align: center;
 }
@@ -476,4 +480,43 @@ hr {
   position: absolute;
   right: 4%;
   bottom: 4%;
+}
+
+.paint-name{
+  display: inline-block;
+}
+
+.paint-metallic {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  color: grey;
+}
+
+.paint-colors {
+  text-align: center;
+}
+
+.paint-colors > div {
+  display: inline-block;
+  width: 12%;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.paint-colors div > img {
+  width: 100%;
+  height: 9vh;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.paint-colors .selected-paint { /* for selected paint color */
+  display: inline-block;
+  width: 12%;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: #2ec4b6;
+  box-sizing: border-box;
 }
