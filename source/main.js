@@ -320,7 +320,7 @@ var $quoteModal = document.querySelector('#quote-modal')
 var $paintName = document.querySelector('#quote-info-color-name')
 var $quoteShipName = document.querySelector('#quote-ship-name')
 
-function findShip(baseShips, shipId) {
+function findShip(shipsInfo, shipId) {
   for (var i = 0; i < shipsInfo.length; i++) {
     if (shipsInfo[i].id === shipId) {
       return shipsInfo[i]
