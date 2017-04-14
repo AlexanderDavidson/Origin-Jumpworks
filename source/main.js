@@ -6,14 +6,6 @@ $('.ui.dropdown')
   .dropdown()
 ;
 
-$('.ui.quote.large.modal')
-  .modal({
-    observeChanges: true,
-    inverted: false
-  })
-  .modal('refresh')
-;
-
 $('.ui.embed').embed();
 
 $(document).ready(function(){
@@ -314,11 +306,8 @@ var baseShips = [
 //
 var $quoteButton = document.querySelector('.quote-button')
 
-
-
 var $quoteModal = document.querySelector('#quote-modal')
 var $paintName = document.querySelector('#quote-info-color-name')
-var $quoteShipName = document.querySelector('#quote-ship-name')
 
 function findShip(shipsInfo, shipId) {
   for (var i = 0; i < shipsInfo.length; i++) {
@@ -348,6 +337,15 @@ function quoteInfoStep(ship) {
 
 }
 
+function clearModal() {
+  var $img = document.querySelector('#quote-ship-img')
+  $img.src = ''
+  $img.className = ''
+
+  var $quoteShipName = document.querySelector('#quote-ship-name')
+  $quoteShipName.textContent = ""
+}
+
 // function clearQuoteModal () {
 //   $quoteModal.innerHTML = ""
 //   $quoteShipImg.innerHTML = ""
@@ -363,16 +361,17 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // if (event.target.className !== 'quote-button') {
     //   return
     // }
-    var shipId = event.target.getAttribute('info-ship-id')
-    var ship = findShip(shipsInfo, shipId)
+    var shipId = event.target.getAttribute('info-ship-id') // ex. id85x
+    var ship = findShip(shipsInfo, shipId)  // ex. shipsInfo, id85x
 
     // SHIP IMAGE
     var $img = document.querySelector('#quote-ship-img')
     $img.src = ''
     $img.src = ship.quoteImg
-    $img.classList = ''
+    $img.className = ''
     $img.classList.add(ship.id)
     // SHIP NAME
+    var $quoteShipName = document.querySelector('#quote-ship-name')
     $quoteShipName.textContent = ""
     $quoteShipName.textContent = ship.name
     // STEPPER / WIZARD ICON SWAPPER
@@ -414,3 +413,12 @@ $(document).ready(function(){
 //   var y = -(e.pageY + this.offsetTop) / 60;
 //   parallax85x.setAttribute('background-position', x + 'px ' + y + 'px')
 // }
+
+$('.ui.quote.large.modal')
+  .modal({
+    observeChanges: true,
+    inverted: false,
+    autofocus: false,
+    onHidden: clearModal()
+  })
+;
