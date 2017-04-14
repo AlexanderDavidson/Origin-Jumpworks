@@ -7,7 +7,7 @@ $('.ui.dropdown')
 ;
 
 $('.ui.modal')
-  .modal()
+  .modal('show')
 ;
 
 $('.ui.embed').embed();
@@ -196,7 +196,30 @@ var baseShips = [
     modalFlavorText: 'Since the dawn of civilization, Humans have striven to build faster machines. Now, ORIGIN presents the culmination of that effort: the ORIGIN 350r. The combination of a Gangleri BP 707 Standard powerplant with a 300i fuselate re-engineered to ac- commodate twin Hammer Propulsion HM 4.3 thrusters makes the 350r the fastest personal craft you’ll ever call your own.'
   },
 ]
+// ======================================================================================================
 
+function findBaseShip(baseShips, shipId) {
+  for (var i = 0; i < baseShips.length; i++) {
+    if (baseShips[i].id === shipId) {
+      return baseShips[i]
+    }
+  }
+}
+
+function showView($views, viewId) {
+  for (var i = 0; i < $views.children.length; i++) {
+    var $view = $views.children[i]
+    if ($view.id === viewId) {
+      $view.classList.remove('hidden')
+    }
+    else {
+      $view.classList.add('hidden')
+    }
+  }
+}
+
+
+// ======================================================================================================
 $(document).ready(function(){
   $('#ship-view-85x').mousemove(function(e){
     var x = -(e.pageX + this.offsetLeft) / 60;
