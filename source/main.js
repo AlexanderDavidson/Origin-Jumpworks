@@ -10,7 +10,6 @@ $('.ui.quote.large.modal')
   .modal({
     observeChanges: true,
     inverted: false
-    transition:
   })
   .modal('refresh')
 ;
