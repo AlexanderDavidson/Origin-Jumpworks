@@ -345,52 +345,6 @@ function clearModal() {
   $quoteShipName.textContent = ""
 }
 
-// function clearQuoteModal () {
-//   $quoteModal.innerHTML = ""
-//   $quoteShipImg.innerHTML = ""
-//   $paintName.innerHTML = ""
-//   $quoteShipName.innerHTML = ""
-// }
-
-// ------
-// document.addEventListener('DOMContentLoaded', function(event) {
-//   event.preventDefault()
-//
-//   $quoteButton.addEventListener('click', function (event) {
-//     // if (event.target.className !== 'quote-button') {
-//     //   return
-//     // }
-//     var shipId = event.target.getAttribute('info-ship-id') // ex. id85x
-//     var ship = findShip(shipsInfo, shipId)  // ex. shipsInfo, id85x
-//
-//     // SHIP IMAGE
-//     var $img = document.querySelector('#quote-ship-img')
-//     $img.src = ''
-//     $img.src = ship.quoteImg
-//     $img.className = ''
-//     $img.classList.add(ship.id)
-//     // SHIP NAME
-//     var $quoteShipName = document.querySelector('#quote-ship-name')
-//     $quoteShipName.textContent = ""
-//     $quoteShipName.textContent = ship.name
-//     // STEPPER / WIZARD ICON SWAPPER
-//
-//     // INFO WIZARD SWITCHER
-//       // PAINT SELECTOR
-//         // SELECTED PAINT NAME
-//       // UPHOLSTERY SELECTOR
-//       // LOCATION SELECTOR
-//       // SUMMARY SELECTOR
-//
-//     // SUMMARY MODEL NAME
-//
-//     // SUMMARY PRICE
-//
-//     // NEXT BUTTON / REQUEST QUOTE BUTTON
-//   })
-// })
-
-
 // NEED TO DYNAMICALLY POPULATE 300 SERIES info
 // NEED TO CREATE BUTTON FUNCTIONALITY FOR OTHER BUTTONS
 //  NEED TO AD FUNCTIONALITY FOR 890 BUTTONS
@@ -480,21 +434,6 @@ $('#ship-350r-btn-quote').click(function(){
   ;
 });
 
-
-// =================================== TEST ================================
-$('.grappa.modal').modal({
-	// this parameter will enable/disable the closing for the previous .united modals when the next will be opened :)
-	allowMultiple: false,
-});
-
-$('.united.modal').modal({
-	// this parameter will enable/disable the closing for the previous .united modals when the next will be opened :)
-	allowMultiple: false,
-});
-
-
-
-
 $('.img-title-300series .quote-button').on('click', function(){
 	// using the attribute data-modal to identify for what modal the button references
 	modal = $(this).attr('data-modal');
@@ -521,3 +460,28 @@ $('center .button').on('click', function(){
 		'show'
 	);
 });
+
+// =================================== TEST ================================
+
+function shipConfigureStep(n){
+    var i = 1, p = document.getElementById("shipStep"+1);
+    while (p !== null){
+        if (i === n){
+            p.style.display = "";
+        }
+        else{
+            p.style.display = "none";
+        }
+        i++;
+        p = document.getElementById("shipStep"+i);
+    }
+}
+
+
+// math for testing purposes
+function submit_form() {
+	var sum = parseInt(document.getElementById("num1").value) +
+            parseInt(document.getElementById("num2").value) +
+            parseInt(document.getElementById("num3").value);
+  alert("Your result is: " + sum);
+}

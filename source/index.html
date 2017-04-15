@@ -45,9 +45,6 @@
                 <i class="icon tint"></i>
               </button>
               <button class="circular big ui inverted icon button">
-                <i class="icon pie chart"></i>
-              </button>
-              <button class="circular big ui inverted icon button">
                 <i class="icon dashboard"></i>
               </button>
               <button data-modal="modalM50" class="circular big ui inverted icon button quote-button" id="ship-m50-btn-quote" info-ship-id="idM50">
@@ -320,9 +317,6 @@
               </button>
               <button class="circular big ui inverted icon button">
                 <i class="icon tint"></i>
-              </button>
-              <button class="circular big ui inverted icon button">
-                <i class="icon pie chart"></i>
               </button>
               <button class="circular big ui inverted icon button">
                 <i class="icon dashboard"></i>
@@ -608,9 +602,6 @@
           </button>
           <button class="circular big ui inverted icon button">
             <i class="icon tint"></i>
-          </button>
-          <button class="circular big ui inverted icon button">
-            <i class="icon pie chart"></i>
           </button>
           <button class="circular big ui inverted icon button">
             <i class="icon dashboard"></i>
@@ -920,9 +911,6 @@
               </button>
               <button class="circular big ui inverted icon button">
                 <i class="icon tint"></i>
-              </button>
-              <button class="circular big ui inverted icon button">
-                <i class="icon pie chart"></i>
               </button>
               <button class="circular big ui inverted icon button">
                 <i class="icon dashboard"></i>
@@ -1560,11 +1548,11 @@
       <i class="close icon"></i>
       <div class="quote-ship">
         <!-- SHIP IMAGE -->
-        <div class="quote-img-85x">
+        <div class="quote-img-8">
           <div>
           <!-- INSERT SHIP IMAGE -->
             <img class="quote-ship-img" id="quote-ship-img-85x" src="../assets/ships/85x/quote_img.png" alt="">
-            <div class="quote-ship-name-85x" id="quote-ship-name-85x">85x</div> <!-- INSERT SHIP NAME -->
+            <div class="quote-ship-name-8" id="quote-ship-name-85x">85x</div> <!-- INSERT SHIP NAME -->
           </div>
         </div>
         <!-- SHIP STEPPER -->
@@ -1977,42 +1965,70 @@
           </div>
           <hr>
         </div>
-        <!-- SHIP INFO -->
+        <!-- ==================== SHIP INFO WIZARD ==================== -->
+        <!-- ==================== SHIP INFO WIZARD ==================== -->
         <div class="quote-info">
           <div class="quote-info">
 
             <!-- COLOR (PAINT) -->
-            <div class="quote-info-paint">
-              <div class="paint-name">
-                <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
-                <div class="paint-metallic">Metallic</div>
+            <div id="shipStep1">
+              Color<br>
+              <!-- ============ COLOR (PAINT) ============ -->
+              <div class="quote-info-paint">
+                <div class="paint-name">
+                  <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                  <div class="paint-metallic">Metallic</div>
+                </div>
+                <div class="paint-colors">
+                  <div class="paint-white">
+                    <img src="../assets/paint/white-paint.jpg" alt="">
+                  </div>
+                  <div class="paint-grey">
+                    <img src="../assets/paint/silver-paint.jpg" alt="">
+                  </div>
+                  <div class="paint-red">
+                    <img src="../assets/paint/red-paint.jpg" alt="">
+                  </div>
+                  <div class="paint-blue">
+                    <img src="../assets/paint/blue-paint.jpg" alt="">
+                  </div>
+                  <div class="paint-yellow">
+                    <img src="../assets/paint/yellow-paint.jpg" alt="">
+                  </div>
+                </div>
               </div>
-              <div class="paint-colors">
-                <div class="paint-white">
-                  <img src="../assets/paint/white-paint.jpg" alt="">
-                </div>
-                <div class="paint-grey">
-                  <img src="../assets/paint/silver-paint.jpg" alt="">
-                </div>
-                <div class="paint-red">
-                  <img src="../assets/paint/red-paint.jpg" alt="">
-                </div>
-                <div class="paint-blue">
-                  <img src="../assets/paint/blue-paint.jpg" alt="">
-                </div>
-                <div class="paint-yellow">
-                  <img src="../assets/paint/yellow-paint.jpg" alt="">
-                </div>
-              </div>
+              <button type="button" onclick="shipConfigureStep(2)">Page 2</button>
             </div>
 
-            <!-- UPHOLSTERY -->
-            <div class="quote-upholstery">
+            <!-- ============ UPHOLSTERY ============ -->
+            <div id="shipStep2" style="display: none;">
+              Upholstery<br>
 
+              <div class="quote-upholstery">
+
+              </div>
+              <button type="button" onclick="shipConfigureStep(1)">Back</button>
+              <button type="button" onclick="shipConfigureStep(3)">Next</button>
             </div>
-            <!-- LOCATION -->
-            <div class="quote-location">
 
+            <!-- ============ LOCATION ============ -->
+            <div id="shipStep3" style="display: none;">
+              Location<br>
+
+              <div class="quote-location">
+
+              </div>
+              <button type="button" onclick="shipConfigureStep(2)">Back</button>
+              <button type="button" onclick="shipConfigureStep(4)">Next</button>
+            </div>
+
+            <div id="shipStep4" style="display: none;">
+              Summary<br>
+              <div class="quote-summary-step">
+
+              </div>
+              <button type="button" onclick="shipConfigureStept(3)">back to Page 4;</button>
+              <button type="button" onclick="submit_form()">Summary</button>
             </div>
 
           </div>
@@ -2044,38 +2060,10 @@
 
 
     <!-- ========================== TEST TEST TEST ======================================== -->
-    <div class="ui united modal" id="modal1">
-      Flounder
-    </div>
-
-    <div class="ui grappa modal" id="modal66">
-    </div>
-
-    <div class="ui united modal" id="modal2">
-      Bass
-    </div>
 
 
-    <div class="ui united modal" id="modal3">
-      Trout
-    </div>
-
-    <!-- Bored Modal -->
-    <div class="ui modal" id="modal4">
-      Carp
-    </div>
-
-
-    <center style="padding: 30px;">
-    	<button data-modal="modal1" id="call-modals" class="ui green button">Call Modal 1, 2 and 3</button>
-    	<button data-modal="modal66" id="call-modals66" class="ui purple button">Order 66</button>
-    	<button data-modal="modal2" id="call-modal-2" class="ui red button">Call Modal 2 and 3 after it</button>
-    	<button data-modal="modal3" id="call-modal-3" class="ui orange button">Call Modal 3 only</button>
-    	<button data-modal="modal4" id="call-modal-4" class="ui secondary button">Call Bored Modal Alone in the dark</button>
-    </center>
 
     <!-- ========================== TEST TEST TEST ======================================== -->
-
     <!-- ============ Scripts ============ -->
     <script type="text/javascript" src="main.js"></script>
   </body>
