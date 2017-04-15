@@ -393,6 +393,20 @@ hr {
   background-position: center center;
 }
 
+
+#quote-ship-img-m50 {
+  position: absolute;
+  top: -9%;
+  left: -21%;
+  width: 80%;
+}
+
+#quote-ship-name-m50 {
+  position: absolute;
+  bottom: 50%;
+  right: 0em;
+}
+
 .id85x {
   position: absolute;
   width: 108%;
@@ -410,8 +424,6 @@ hr {
   font-family: 'Josefin Sans', sans-serif;
   color: transparent;
   font-size: 10vw;
-  width: 100%;
-  padding-left: 65%;
   background: url(../assets/quote_bg2.jpg) repeat;
   background-size: cover;
   background-position: center center;
