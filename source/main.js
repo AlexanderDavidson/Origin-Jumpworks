@@ -11,7 +11,6 @@ $('.ui.embed').embed();
 $(document).ready(function(){
   // need way to dynamically choose which button was chosen
   $(".quote-button").click(function(){
-  $('.ui.quote.large.modal').modal('show');
   });
 });
 
@@ -354,42 +353,42 @@ function clearModal() {
 // }
 
 // ------
-document.addEventListener('DOMContentLoaded', function(event) {
-  event.preventDefault()
-
-  $quoteButton.addEventListener('click', function (event) {
-    // if (event.target.className !== 'quote-button') {
-    //   return
-    // }
-    var shipId = event.target.getAttribute('info-ship-id') // ex. id85x
-    var ship = findShip(shipsInfo, shipId)  // ex. shipsInfo, id85x
-
-    // SHIP IMAGE
-    var $img = document.querySelector('#quote-ship-img')
-    $img.src = ''
-    $img.src = ship.quoteImg
-    $img.className = ''
-    $img.classList.add(ship.id)
-    // SHIP NAME
-    var $quoteShipName = document.querySelector('#quote-ship-name')
-    $quoteShipName.textContent = ""
-    $quoteShipName.textContent = ship.name
-    // STEPPER / WIZARD ICON SWAPPER
-
-    // INFO WIZARD SWITCHER
-      // PAINT SELECTOR
-        // SELECTED PAINT NAME
-      // UPHOLSTERY SELECTOR
-      // LOCATION SELECTOR
-      // SUMMARY SELECTOR
-
-    // SUMMARY MODEL NAME
-
-    // SUMMARY PRICE
-
-    // NEXT BUTTON / REQUEST QUOTE BUTTON
-  })
-})
+// document.addEventListener('DOMContentLoaded', function(event) {
+//   event.preventDefault()
+//
+//   $quoteButton.addEventListener('click', function (event) {
+//     // if (event.target.className !== 'quote-button') {
+//     //   return
+//     // }
+//     var shipId = event.target.getAttribute('info-ship-id') // ex. id85x
+//     var ship = findShip(shipsInfo, shipId)  // ex. shipsInfo, id85x
+//
+//     // SHIP IMAGE
+//     var $img = document.querySelector('#quote-ship-img')
+//     $img.src = ''
+//     $img.src = ship.quoteImg
+//     $img.className = ''
+//     $img.classList.add(ship.id)
+//     // SHIP NAME
+//     var $quoteShipName = document.querySelector('#quote-ship-name')
+//     $quoteShipName.textContent = ""
+//     $quoteShipName.textContent = ship.name
+//     // STEPPER / WIZARD ICON SWAPPER
+//
+//     // INFO WIZARD SWITCHER
+//       // PAINT SELECTOR
+//         // SELECTED PAINT NAME
+//       // UPHOLSTERY SELECTOR
+//       // LOCATION SELECTOR
+//       // SUMMARY SELECTOR
+//
+//     // SUMMARY MODEL NAME
+//
+//     // SUMMARY PRICE
+//
+//     // NEXT BUTTON / REQUEST QUOTE BUTTON
+//   })
+// })
 
 
 // NEED TO DYNAMICALLY POPULATE 300 SERIES info
@@ -414,11 +413,111 @@ $(document).ready(function(){
 //   parallax85x.setAttribute('background-position', x + 'px ' + y + 'px')
 // }
 
-$('.ui.quote.large.modal')
-  .modal({
-    observeChanges: true,
-    inverted: false,
-    autofocus: false,
-    onHidden: clearModal()
-  })
-;
+
+$('#ship-m50-btn-quote').click(function(){ // refers to: id on button
+  $('')  // refers to: no clue but it's working
+    .modal({
+      inverted: false,
+      allowMultiple: false,
+      autofocus: false
+    })
+    .modal('refresh')
+  ;
+});
+
+$('#ship-85x-btn-quote').click(function(){
+  $('')  // refers to: no clue but it's working
+    .modal({
+      inverted: false,
+      allowMultiple: false,
+      autofocus: false
+    })
+    .modal('refresh')
+  ;
+});
+
+$('#ship-300i-btn-quote').click(function(){
+  $('')  // refers to: no clue but it's working
+    .modal({
+      inverted: false,
+      allowMultiple: false,
+      autofocus: false
+    })
+    .modal('refresh')
+  ;
+});
+
+$('#ship-315p-btn-quote').click(function(){
+  $('')  // refers to: no clue but it's working
+    .modal({
+      inverted: false,
+      allowMultiple: false,
+      autofocus: false
+    })
+    .modal('refresh')
+  ;
+});
+
+$('#ship-325a-btn-quote').click(function(){
+  $('')  // refers to: no clue but it's working
+    .modal({
+      inverted: false,
+      allowMultiple: false,
+      autofocus: false
+    })
+    .modal('refresh')
+  ;
+});
+
+$('#ship-350r-btn-quote').click(function(){
+  $('')
+    .modal({
+      inverted: false,
+      allowMultiple: false,
+      autofocus: false
+    })
+    .modal('refresh')
+  ;
+});
+
+
+// =================================== TEST ================================
+$('.grappa.modal').modal({
+	// this parameter will enable/disable the closing for the previous .united modals when the next will be opened :)
+	allowMultiple: false,
+});
+
+$('.united.modal').modal({
+	// this parameter will enable/disable the closing for the previous .united modals when the next will be opened :)
+	allowMultiple: false,
+});
+
+
+
+
+$('.img-title-300series .quote-button').on('click', function(){
+	// using the attribute data-modal to identify for what modal the button references
+	modal = $(this).attr('data-modal');
+	// creating the individual event attached to click over button
+	$('#'+modal+'.modal').modal(
+		'show'
+	);
+});
+
+$('.ten.wide.column div .quote-button').on('click', function(){
+	// using the attribute data-modal to identify for what modal the button references
+	modal = $(this).attr('data-modal');
+	// creating the individual event attached to click over button
+	$('#'+modal+'.modal').modal(
+		'show'
+	);
+});
+
+$('center .button').on('click', function(){
+	// using the attribute data-modal to identify for what modal the button references
+	modal = $(this).attr('data-modal');
+	// creating the individual event attached to click over button
+	$('#'+modal+'.modal').modal(
+		'show'
+	);
+});

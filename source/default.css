@@ -295,7 +295,7 @@ hr {
 }
 
 /* Image title styles */
-.image_title {
+.img-title-300series {
   font-family: 'Josefin Sans', sans-serif;
   background: black;
   position: absolute;
@@ -306,14 +306,14 @@ hr {
   height: 4em;
 }
 
-.image_title a {
+.img-title-300series a {
   display: block;
   color: white !important;
   color: #fff;
   font-size: 7em;
 }
 
-.image_title button {
+.img-title-300series button {
   position: absolute;
   left: 18em;
   top: 4em;
@@ -406,7 +406,7 @@ hr {
   left: -5vw;
 }
 
-#quote-ship-name {
+.quote-ship-name {
   font-family: 'Josefin Sans', sans-serif;
   color: transparent;
   font-size: 10vw;
@@ -467,7 +467,7 @@ hr {
   border-bottom: 1px solid white;
 }
 
-#quote-summary {
+.quote-summary {
   font-family: 'Josefin Sans', sans-serif;
   height: 10vh;
   width: 100%;

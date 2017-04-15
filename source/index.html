@@ -50,7 +50,7 @@
               <button class="circular big ui inverted icon button">
                 <i class="icon dashboard"></i>
               </button>
-              <button class="circular big ui inverted icon button quote-button" id="ship-m50-btn-quote" info-ship-id="idM50">
+              <button data-modal="modalM50" class="circular big ui inverted icon button quote-button" id="ship-m50-btn-quote" info-ship-id="idM50">
                 <i class="icon add to cart quote-button"></i>
               </button>
             </div>
@@ -298,6 +298,7 @@
       <div class="ui horizontal inverted divider"><i class="space shuttle icon"></i></div>
     </div>
     <!-- ============ Divider ============ -->
+
     <!-- ============ 85x ============ -->
     <div class="content" id="ship-grid-85x">
       <div class="ui grid">
@@ -326,7 +327,7 @@
               <button class="circular big ui inverted icon button">
                 <i class="icon dashboard"></i>
               </button>
-              <button class="circular big ui inverted icon button quote-button" info-ship-id="id85x">
+              <button data-modal="modal85x" class="circular big ui inverted icon button quote-button" id="ship-85x-btn-quote" info-ship-id="id85x">
                 <i class="icon add to cart quote-button" info-ship-id="id85x"></i>
               </button>
             </div>
@@ -633,9 +634,9 @@
             <div class="ships-slider">
               <ul>
                 <li>
-                  <div class="image_title">
+                  <div class="img-title-300series">
                     <a href="#">300i</a>
-                    <button class="circular mini ui inverted icon button quote-button" info-ship-id="id300i">
+                    <button data-modal="modal300i" class="circular mini ui inverted icon button quote-button" info-ship-id="id300i"  id="ship-300i-btn-quote">
                       <i class="icon add to cart quote-button"></i>
                     </button>
                   </div>
@@ -644,9 +645,9 @@
                   </a>
                 </li>
                 <li>
-                  <div class="image_title">
+                  <div class="img-title-300series">
                     <a href="#">315p</a>
-                    <button class="circular mini ui inverted icon button quote-button" info-ship-id="id315p">
+                    <button data-modal="modal315p" class="circular mini ui inverted icon button quote-button" info-ship-id="id315p"  id="ship-315p-btn-quote">
                       <i class="icon add to cart quote-button"></i>
                     </button>
                   </div>
@@ -655,9 +656,9 @@
                   </a>
                 </li>
                 <li>
-                  <div class="image_title">
+                  <div class="img-title-300series">
                     <a href="#">325a</a>
-                    <button class="circular mini ui inverted icon button quote-button" info-ship-id="id325a">
+                    <button data-modal="modal325a" class="circular mini ui inverted icon button quote-button" info-ship-id="id325a"  id="ship-325a-btn-quote">
                       <i class="icon add to cart quote-button"></i>
                     </button>
                   </div>
@@ -926,7 +927,7 @@
               <button class="circular big ui inverted icon button">
                 <i class="icon dashboard"></i>
               </button>
-              <button class="circular big ui inverted icon button quote-button" info-ship-id="id350r">
+              <button data-modal="modal350r" class="circular big ui inverted icon button quote-button" info-ship-id="id350r" id="ship-350r-btn-quote">
                 <i class="icon add to cart quote-button"></i>
               </button>
             </div>
@@ -1453,16 +1454,23 @@
     </div>
     <!-- ============ Divider ============ -->
 
-    <!-- ============ QUOTE MODAL ============ -->
-    <div class="ui quote large modal hidden" id="quote-modal">
+
+
+
+<!-- ========================== TEST ||  Modal Test  ||  TEST ======================================== -->
+
+<!-- CURRENTLY WORKING:  M50, 350r -->
+
+<!-- ============ QUOTE MODAL M50 ============ -->
+    <div class="ui modal" id="modalM50">
       <i class="close icon"></i>
       <div class="quote-ship">
         <!-- SHIP IMAGE -->
         <div class="quote-img">
           <div>
           <!-- INSERT SHIP IMAGE -->
-            <img id="quote-ship-img" src="" alt="">
-            <div id="quote-ship-name"></div> <!-- INSERT SHIP NAME -->
+            <img class="quote-ship-img" src="../assets/ships/m50/quote_img.png" alt="">
+            <div class="quote-ship-name"></div> <!-- INSERT SHIP NAME -->
           </div>
         </div>
         <!-- SHIP STEPPER -->
@@ -1488,12 +1496,12 @@
         </div>
         <!-- SHIP INFO -->
         <div class="quote-info">
-          <div id="quote-info">
+          <div class="quote-info">
 
             <!-- COLOR (PAINT) -->
-            <div id="quote-info-paint">
+            <div class="quote-info-paint">
               <div class="paint-name">
-                <div id="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
                 <div class="paint-metallic">Metallic</div>
               </div>
               <div class="paint-colors">
@@ -1516,11 +1524,11 @@
             </div>
 
             <!-- UPHOLSTERY -->
-            <div id="quote-upholstery">
+            <div class="quote-upholstery">
 
             </div>
             <!-- LOCATION -->
-            <div id="quote-location">
+            <div class="quote-location">
 
             </div>
 
@@ -1528,28 +1536,548 @@
         </div>
 
         <!-- SUMMARY -->
-        <div id="quote-summary">
+        <div class="quote-summary">
           <div class="quote-summary-info">
             <div class="quote-summary-model">
               <span class="model">Model</span>
               <span>|</span>
-              <span id="model-name"></span> <!-- INSERT MODEL NAME -->
+              <span class="model-name"></span> <!-- INSERT MODEL NAME -->
             </div>
             <div class="quote-summary-msrp">
               <span class="msrp">MSRP</span>
               <span>|</span>
-              <span id="uec"></span> <!-- INSERT PRICE -->
+              <span class="uec"></span> <!-- INSERT PRICE -->
             </div>
           </div>
           <!-- INSERT CORRECT BUTTON FOR CURRENT STEP -->
           <div class="ui inverted quote-summary-button">
             <!-- INSERT NEXT/REQUEST A QUOTE BUTTON TEXT -->
-            <button id="quote-step-next-button" class="ui inverted black button"></button>
+            <button class="ui inverted black button quote-step-next-button"></button>
           </div>
         </div>
 
       </div>
     </div>
+<!-- ============ QUOTE MODAL 85x ============ -->
+    <div class="ui modal" id="modal85x">
+      <i class="close icon"></i>
+      <div class="quote-ship">
+        <!-- SHIP IMAGE -->
+        <div class="quote-img">
+          <div>
+          <!-- INSERT SHIP IMAGE -->
+            <img class="quote-ship-img" src="../assets/ships/85x/quote_img.png" alt="">
+            <div class="quote-ship-name">85x</div> <!-- INSERT SHIP NAME -->
+          </div>
+        </div>
+        <!-- SHIP STEPPER -->
+        <div class="quote-step">
+          <div class="quote-ship-step">
+            <div class="quote-step-indicator-name">
+              <a href="#">COLOR</a>
+              <span>|</span>
+              <a href="#">UPHOLSTERY</a>
+              <span>|</span>
+              <a href="#">LOCATION</a>
+              <span>|</span>
+              <a href="#">SUMMARY</a>
+            </div>
+            <div class="quote-step-indicator-icon">
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- SHIP INFO -->
+        <div class="quote-info">
+          <div class="quote-info">
+
+            <!-- COLOR (PAINT) -->
+            <div class="quote-info-paint">
+              <div class="paint-name">
+                <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                <div class="paint-metallic">Metallic</div>
+              </div>
+              <div class="paint-colors">
+                <div class="paint-white">
+                  <img src="../assets/paint/white-paint.jpg" alt="">
+                </div>
+                <div class="paint-grey">
+                  <img src="../assets/paint/silver-paint.jpg" alt="">
+                </div>
+                <div class="paint-red">
+                  <img src="../assets/paint/red-paint.jpg" alt="">
+                </div>
+                <div class="paint-blue">
+                  <img src="../assets/paint/blue-paint.jpg" alt="">
+                </div>
+                <div class="paint-yellow">
+                  <img src="../assets/paint/yellow-paint.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <!-- UPHOLSTERY -->
+            <div class="quote-upholstery">
+
+            </div>
+            <!-- LOCATION -->
+            <div class="quote-location">
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="quote-summary">
+          <div class="quote-summary-info">
+            <div class="quote-summary-model">
+              <span class="model">Model</span>
+              <span>|</span>
+              <span class="model-name"></span> <!-- INSERT MODEL NAME -->
+            </div>
+            <div class="quote-summary-msrp">
+              <span class="msrp">MSRP</span>
+              <span>|</span>
+              <span class="uec"></span> <!-- INSERT PRICE -->
+            </div>
+          </div>
+          <!-- INSERT CORRECT BUTTON FOR CURRENT STEP -->
+          <div class="ui inverted quote-summary-button">
+            <!-- INSERT NEXT/REQUEST A QUOTE BUTTON TEXT -->
+            <button class="ui inverted black button quote-step-next-button"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<!-- ============ QUOTE MODAL 300i ============ -->
+    <div class="ui modal" id="modal300i">
+      <i class="close icon"></i>
+      <div class="quote-ship">
+        <!-- SHIP IMAGE -->
+        <div class="quote-img">
+          <div>
+          <!-- INSERT SHIP IMAGE -->
+            <img class="quote-ship-img" src="../assets/ships/ship300series/quote_img_300i.png" alt="">
+            <div class="quote-ship-name">300i</div> <!-- INSERT SHIP NAME -->
+          </div>
+        </div>
+        <!-- SHIP STEPPER -->
+        <div class="quote-step">
+          <div class="quote-ship-step">
+            <div class="quote-step-indicator-name">
+              <a href="#">COLOR</a>
+              <span>|</span>
+              <a href="#">UPHOLSTERY</a>
+              <span>|</span>
+              <a href="#">LOCATION</a>
+              <span>|</span>
+              <a href="#">SUMMARY</a>
+            </div>
+            <div class="quote-step-indicator-icon">
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- SHIP INFO -->
+        <div class="quote-info">
+          <div class="quote-info">
+
+            <!-- COLOR (PAINT) -->
+            <div class="quote-info-paint">
+              <div class="paint-name">
+                <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                <div class="paint-metallic">Metallic</div>
+              </div>
+              <div class="paint-colors">
+                <div class="paint-white">
+                  <img src="../assets/paint/white-paint.jpg" alt="">
+                </div>
+                <div class="paint-grey">
+                  <img src="../assets/paint/silver-paint.jpg" alt="">
+                </div>
+                <div class="paint-red">
+                  <img src="../assets/paint/red-paint.jpg" alt="">
+                </div>
+                <div class="paint-blue">
+                  <img src="../assets/paint/blue-paint.jpg" alt="">
+                </div>
+                <div class="paint-yellow">
+                  <img src="../assets/paint/yellow-paint.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <!-- UPHOLSTERY -->
+            <div class="quote-upholstery">
+
+            </div>
+            <!-- LOCATION -->
+            <div class="quote-location">
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="quote-summary">
+          <div class="quote-summary-info">
+            <div class="quote-summary-model">
+              <span class="model">Model</span>
+              <span>|</span>
+              <span class="model-name"></span> <!-- INSERT MODEL NAME -->
+            </div>
+            <div class="quote-summary-msrp">
+              <span class="msrp">MSRP</span>
+              <span>|</span>
+              <span class="uec"></span> <!-- INSERT PRICE -->
+            </div>
+          </div>
+          <!-- INSERT CORRECT BUTTON FOR CURRENT STEP -->
+          <div class="ui inverted quote-summary-button">
+            <!-- INSERT NEXT/REQUEST A QUOTE BUTTON TEXT -->
+            <button class="ui inverted black button quote-step-next-button"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<!-- ============ QUOTE MODAL 315p ============ -->
+    <div class="ui modal" id="modal315p">
+      <i class="close icon"></i>
+      <div class="quote-ship">
+        <!-- SHIP IMAGE -->
+        <div class="quote-img">
+          <div>
+          <!-- INSERT SHIP IMAGE -->
+            <img class="quote-ship-img" src="../assets/ships/ship300series/quote_img_315p.png" alt="">
+            <div class="quote-ship-name">315p</div> <!-- INSERT SHIP NAME -->
+          </div>
+        </div>
+        <!-- SHIP STEPPER -->
+        <div class="quote-step">
+          <div class="quote-ship-step">
+            <div class="quote-step-indicator-name">
+              <a href="#">COLOR</a>
+              <span>|</span>
+              <a href="#">UPHOLSTERY</a>
+              <span>|</span>
+              <a href="#">LOCATION</a>
+              <span>|</span>
+              <a href="#">SUMMARY</a>
+            </div>
+            <div class="quote-step-indicator-icon">
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- SHIP INFO -->
+        <div class="quote-info">
+          <div class="quote-info">
+
+            <!-- COLOR (PAINT) -->
+            <div class="quote-info-paint">
+              <div class="paint-name">
+                <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                <div class="paint-metallic">Metallic</div>
+              </div>
+              <div class="paint-colors">
+                <div class="paint-white">
+                  <img src="../assets/paint/white-paint.jpg" alt="">
+                </div>
+                <div class="paint-grey">
+                  <img src="../assets/paint/silver-paint.jpg" alt="">
+                </div>
+                <div class="paint-red">
+                  <img src="../assets/paint/red-paint.jpg" alt="">
+                </div>
+                <div class="paint-blue">
+                  <img src="../assets/paint/blue-paint.jpg" alt="">
+                </div>
+                <div class="paint-yellow">
+                  <img src="../assets/paint/yellow-paint.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <!-- UPHOLSTERY -->
+            <div class="quote-upholstery">
+
+            </div>
+            <!-- LOCATION -->
+            <div class="quote-location">
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="quote-summary">
+          <div class="quote-summary-info">
+            <div class="quote-summary-model">
+              <span class="model">Model</span>
+              <span>|</span>
+              <span class="model-name"></span> <!-- INSERT MODEL NAME -->
+            </div>
+            <div class="quote-summary-msrp">
+              <span class="msrp">MSRP</span>
+              <span>|</span>
+              <span class="uec"></span> <!-- INSERT PRICE -->
+            </div>
+          </div>
+          <!-- INSERT CORRECT BUTTON FOR CURRENT STEP -->
+          <div class="ui inverted quote-summary-button">
+            <!-- INSERT NEXT/REQUEST A QUOTE BUTTON TEXT -->
+            <button class="ui inverted black button quote-step-next-button"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+<!-- ============ QUOTE MODAL 325a============ -->
+    <div class="ui modal" id="modal325a">
+      <i class="close icon"></i>
+      <div class="quote-ship">
+        <!-- SHIP IMAGE -->
+        <div class="quote-img">
+          <div>
+          <!-- INSERT SHIP IMAGE -->
+            <img class="quote-ship-img" src="../assets/ships/ship300series/quote_img_325a.png" alt="">
+            <div class="quote-ship-name">325a</div>
+          </div>
+        </div>
+        <!-- SHIP STEPPER -->
+        <div class="quote-step">
+          <div class="quote-ship-step">
+            <div class="quote-step-indicator-name">
+              <a href="#">COLOR</a>
+              <span>|</span>
+              <a href="#">UPHOLSTERY</a>
+              <span>|</span>
+              <a href="#">LOCATION</a>
+              <span>|</span>
+              <a href="#">SUMMARY</a>
+            </div>
+            <div class="quote-step-indicator-icon">
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- SHIP INFO -->
+        <div class="quote-info">
+          <div class="quote-info">
+
+            <!-- COLOR (PAINT) -->
+            <div class="quote-info-paint">
+              <div class="paint-name">
+                <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                <div class="paint-metallic">Metallic</div>
+              </div>
+              <div class="paint-colors">
+                <div class="paint-white">
+                  <img src="../assets/paint/white-paint.jpg" alt="">
+                </div>
+                <div class="paint-grey">
+                  <img src="../assets/paint/silver-paint.jpg" alt="">
+                </div>
+                <div class="paint-red">
+                  <img src="../assets/paint/red-paint.jpg" alt="">
+                </div>
+                <div class="paint-blue">
+                  <img src="../assets/paint/blue-paint.jpg" alt="">
+                </div>
+                <div class="paint-yellow">
+                  <img src="../assets/paint/yellow-paint.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <!-- UPHOLSTERY -->
+            <div class="quote-upholstery">
+
+            </div>
+            <!-- LOCATION -->
+            <div class="quote-location">
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="quote-summary">
+          <div class="quote-summary-info">
+            <div class="quote-summary-model">
+              <span class="model">Model</span>
+              <span>|</span>
+              <span class="model-name"></span> <!-- INSERT MODEL NAME -->
+            </div>
+            <div class="quote-summary-msrp">
+              <span class="msrp">MSRP</span>
+              <span>|</span>
+              <span class="uec"></span> <!-- INSERT PRICE -->
+            </div>
+          </div>
+          <!-- INSERT CORRECT BUTTON FOR CURRENT STEP -->
+          <div class="ui inverted quote-summary-button">
+            <!-- INSERT NEXT/REQUEST A QUOTE BUTTON TEXT -->
+            <button class="ui inverted black button quote-step-next-button"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<!-- ============ QUOTE MODAL 350r ============ -->
+    <div class="ui modal" id="modal350r">
+      <i class="close icon"></i>
+      <div class="quote-ship">
+        <!-- SHIP IMAGE -->
+        <div class="quote-img">
+          <div>
+          <!-- INSERT SHIP IMAGE -->
+            <img class="quote-ship-img" src="../assets/ships/350r/quote_img.png" alt="">
+            <div class="quote-ship-name">350r</div> <!-- INSERT SHIP NAME -->
+          </div>
+        </div>
+        <!-- SHIP STEPPER -->
+        <div class="quote-step">
+          <div class="quote-ship-step">
+            <div class="quote-step-indicator-name">
+              <a href="#">COLOR</a>
+              <span>|</span>
+              <a href="#">UPHOLSTERY</a>
+              <span>|</span>
+              <a href="#">LOCATION</a>
+              <span>|</span>
+              <a href="#">SUMMARY</a>
+            </div>
+            <div class="quote-step-indicator-icon">
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+              <i class="circle thin icon"></i>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- SHIP INFO -->
+        <div class="quote-info">
+          <div class="quote-info">
+
+            <!-- COLOR (PAINT) -->
+            <div class="quote-info-paint">
+              <div class="paint-name">
+                <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                <div class="paint-metallic">Metallic</div>
+              </div>
+              <div class="paint-colors">
+                <div class="paint-white">
+                  <img src="../assets/paint/white-paint.jpg" alt="">
+                </div>
+                <div class="paint-grey">
+                  <img src="../assets/paint/silver-paint.jpg" alt="">
+                </div>
+                <div class="paint-red">
+                  <img src="../assets/paint/red-paint.jpg" alt="">
+                </div>
+                <div class="paint-blue">
+                  <img src="../assets/paint/blue-paint.jpg" alt="">
+                </div>
+                <div class="paint-yellow">
+                  <img src="../assets/paint/yellow-paint.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <!-- UPHOLSTERY -->
+            <div class="quote-upholstery">
+
+            </div>
+            <!-- LOCATION -->
+            <div class="quote-location">
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="quote-summary">
+          <div class="quote-summary-info">
+            <div class="quote-summary-model">
+              <span class="model">Model</span>
+              <span>|</span>
+              <span class="model-name"></span> <!-- INSERT MODEL NAME -->
+            </div>
+            <div class="quote-summary-msrp">
+              <span class="msrp">MSRP</span>
+              <span>|</span>
+              <span class="uec"></span> <!-- INSERT PRICE -->
+            </div>
+          </div>
+          <!-- INSERT CORRECT BUTTON FOR CURRENT STEP -->
+          <div class="ui inverted quote-summary-button">
+            <!-- INSERT NEXT/REQUEST A QUOTE BUTTON TEXT -->
+            <button class="ui inverted black button quote-step-next-button"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ========================== TEST TEST TEST ======================================== -->
+    <div class="ui united modal" id="modal1">
+      Flounder
+    </div>
+
+    <div class="ui grappa modal" id="modal66">
+    </div>
+
+    <div class="ui united modal" id="modal2">
+      Bass
+    </div>
+
+
+    <div class="ui united modal" id="modal3">
+      Trout
+    </div>
+
+    <!-- Bored Modal -->
+    <div class="ui modal" id="modal4">
+      Carp
+    </div>
+
+
+    <center style="padding: 30px;">
+    	<button data-modal="modal1" id="call-modals" class="ui green button">Call Modal 1, 2 and 3</button>
+    	<button data-modal="modal66" id="call-modals66" class="ui purple button">Order 66</button>
+    	<button data-modal="modal2" id="call-modal-2" class="ui red button">Call Modal 2 and 3 after it</button>
+    	<button data-modal="modal3" id="call-modal-3" class="ui orange button">Call Modal 3 only</button>
+    	<button data-modal="modal4" id="call-modal-4" class="ui secondary button">Call Bored Modal Alone in the dark</button>
+    </center>
+
+    <!-- ========================== TEST TEST TEST ======================================== -->
 
     <!-- ============ Scripts ============ -->
     <script type="text/javascript" src="main.js"></script>
