@@ -453,7 +453,7 @@ hr {
 .quote-img-325 {
   height: 40vh;
   width: 100%;
-  background-image: url(../assets/quote_bg3.jpg);  /* CHANGE */
+  background-image: url(../assets/quote_bg.jpg);  /* CHANGE */
   background-size: cover;
   background-position: center center;
 }
@@ -462,10 +462,10 @@ hr {
   font-family: 'Josefin Sans', sans-serif;
   color: transparent;
   font-size: 10vw;
-  background: url(../assets/quote_bg3.jpg) repeat; /* CHANGE */
+  background: url(../assets/quote_bg.jpg) repeat; /* CHANGE */
   background-size: cover;
   background-position: center center;
-  filter: hue-rotate(-20deg) brightness(3) drop-shadow(4px 4px 8px black);
+  filter: hue-rotate(-20deg) brightness(4) drop-shadow(4px 4px 8px black);
   -webkit-background-clip: text;
 }
 
