@@ -75,6 +75,10 @@ hr {
   text-align: justify;
 }
 
+.or {
+  color: black;
+}
+
 .accordion {
   background-color: black;
   color: white !important;
