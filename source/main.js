@@ -464,16 +464,20 @@ $('center .button').on('click', function(){
 // =================================== TEST ================================
 
 function shipConfigureStep(n){
-    var i = 1, p = document.getElementById("shipStep"+1);
+    var i = 1, p = document.getElementById("shipStep"+1), o = document.getElementById("shipStepIcon"+1);
+
     while (p !== null){
         if (i === n){
             p.style.display = "";
+            o.className = "circle icon";
         }
         else{
             p.style.display = "none";
+            o.className = "circle thin icon";
         }
         i++;
         p = document.getElementById("shipStep"+i);
+        o = document.getElementById("shipStepIcon"+i);
     }
 }
 

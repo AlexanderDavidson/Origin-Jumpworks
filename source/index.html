@@ -1950,17 +1950,17 @@
             <div class="quote-step-indicator-name">
               <a href="#">COLOR</a>
               <span>|</span>
-              <a href="#">UPHOLSTERY</a>
+              <a href="#">INTERIOR</a>
               <span>|</span>
               <a href="#">LOCATION</a>
               <span>|</span>
               <a href="#">SUMMARY</a>
             </div>
             <div class="quote-step-indicator-icon">
-              <i class="circle thin icon"></i>
-              <i class="circle thin icon"></i>
-              <i class="circle thin icon"></i>
-              <i class="circle thin icon"></i>
+              <i id="shipStepIcon1" class="circle icon"></i>
+              <i id="shipStepIcon2" class="circle thin icon"></i>
+              <i id="shipStepIcon3" class="circle thin icon"></i>
+              <i id="shipStepIcon4" class="circle thin icon"></i>
             </div>
           </div>
           <hr>
@@ -1998,33 +1998,31 @@
                 </div>
               </div>
 
-              <div class="ui animated left floated inverted violet basic button quote-step-next-button" type="button" onclick="shipConfigureStep(2)" tabindex="0">
-                <div class="visible content">UPHOLSTERY</div>
+              <div class="ui animated fade right floated inverted blue basic button quote-step-next-button" type="button" onclick="shipConfigureStep(2)" tabindex="0">
+                <div class="visible content">INTERIOR<i class="angle double right icon"></i></div>
                 <div class="hidden content">
-                  <i class="paint brush icon"></i>
+                  <i class="dashboard icon"></i>
                 </div>
               </div>
             </div>
 
             <!-- ============ UPHOLSTERY ============ -->
             <div id="shipStep2" style="display: none;">
-              Upholstery<br>
 
               <div class="quote-upholstery">
 
               </div>
 
-              <div class="ui animated left floated inverted violet basic button quote-step-next-button" type="button" onclick="shipConfigureStep(1)" tabindex="0">
-                <div class="visible content">COLOR</div>
+              <div class="ui animated fade left floated inverted violet basic button quote-step-next-button" type="button" onclick="shipConfigureStep(1)" tabindex="0">
+                <div class="visible content"><i class="angle double left icon"></i>COLOR</div>
                 <div class="hidden content">
                   <i class="paint brush icon"></i>
                 </div>
               </div>
-              <div class="ui animated right floated inverted blue basic button quote-step-next-button" type="button" onclick="shipConfigureStep(3)" tabindex="0">
-                <div class="visible content">
-                  LOCATION
-                </div>
+              <div class="ui animated fade right floated inverted blue basic button quote-step-next-button" type="button" onclick="shipConfigureStep(3)" tabindex="0">
+                <div class="visible content">LOCATION<i class="angle double right icon"></i></div>
                 <div class="hidden content">
+
                   <i class="globe icon"></i>
                 </div>
               </div>
@@ -2032,28 +2030,52 @@
 
             <!-- ============ LOCATION ============ -->
             <div id="shipStep3" style="display: none;">
-              Location<br>
-
               <div class="quote-location">
 
               </div>
-              <button class="ui inverted violet basic button quote-step-next-button" type="button" onclick="shipConfigureStep(2)">Back</button>
-              <button class="ui inverted blue basic button quote-step-next-button" type="button" onclick="shipConfigureStep(4)">Next</button>
+              <div class="ui animated fade left floated inverted violet basic button quote-step-next-button" type="button" onclick="shipConfigureStep(2)" tabindex="0">
+                <div class="visible content"><i class="angle double left icon"></i>INTERIOR</div>
+                <div class="hidden content">
+
+                  <i class="dashboard icon"></i>
+                </div>
+              </div>
+
+              <div class="ui animated fade right floated inverted blue basic button quote-step-next-button" type="button" onclick="shipConfigureStep(4)" tabindex="0">
+                <div class="visible content">SUMMARY<i class="angle double right icon"></i></div>
+                <div class="hidden content">
+
+                  <i class="options icon"></i>
+                </div>
+              </div>
+
             </div>
 
+            <!-- ============ SUMMARY ============ -->
             <div id="shipStep4" style="display: none;">
-              Summary<br>
               <div class="quote-summary-step">
 
               </div>
-              <button class="ui inverted violet basic button quote-step-next-button" type="button" onclick="shipConfigureStept(3)">back to Page 4;</button>
-              <button class="ui inverted blue basic button quote-step-next-button" type="button" onclick="submit_form()">Summary</button>
+              <div class="ui animated fade left floated inverted blue basic button quote-step-next-button" type="button" onclick="shipConfigureStep(3)" tabindex="0">
+                <div class="visible content"><i class="angle double left icon"></i>LOCATION</div>
+                <div class="hidden content">
+                  <i class="globe icon"></i>
+                </div>
+              </div>
+
+              <div class="ui animated fade right floated inverted red button quote-step-next-button" type="button" onclick="submit_form()" tabindex="0">
+                <div class="visible content">Request a Quote</div>
+                <div class="hidden content">
+                  <i class="shopping basket icon"></i>
+                </div>
+              </div>
+
             </div>
 
           </div>
         </div>
 
-        <!-- SUMMARY -->
+        <!-- ============== SUMMARY ============== -->
         <div class="quote-summary">
           <div class="quote-summary-info">
             <div class="quote-summary-model">
