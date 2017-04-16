@@ -752,3 +752,28 @@ hr {
   background-color: #2ec4b6;
   box-sizing: border-box;
 }
+
+.quote-location {
+  height: 11em;
+}
+
+.location {
+  text-align: center;
+}
+
+.location > div {
+  display: inline-block;
+  width: 10%;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+}
+
+.location div > img {
+  width: 130%;
+  /*height: 9vh;*/
+}
+
+.location .selected-paint { /* for selected paint color */
+  display: inline-block;
+  width: 12%;
+}
