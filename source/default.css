@@ -492,6 +492,10 @@ hr {
   -webkit-background-clip: text;
 }
 
+.quote-step-next-button {
+  border-radius: 0 !important;
+  border: -1.5em;
+}
 
 #quote-ship-img-m50 {
   position: absolute;
@@ -712,6 +716,35 @@ hr {
 }
 
 .paint-colors .selected-paint { /* for selected paint color */
+  display: inline-block;
+  width: 12%;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: #2ec4b6;
+  box-sizing: border-box;
+}
+
+.materials {
+  text-align: center;
+}
+
+.materials > div {
+  display: inline-block;
+  width: 12%;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.materials div > img {
+  width: 100%;
+  height: 9vh;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.materials .selected-paint { /* for selected paint color */
   display: inline-block;
   width: 12%;
   -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
