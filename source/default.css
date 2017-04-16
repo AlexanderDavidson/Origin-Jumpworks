@@ -604,12 +604,25 @@ hr {
   background-color: black;
 }
 
-.quote-step hr {
-  width: 70%;
+.quote-ship-step {
+  text-align: center;
+  position: relative;
+  top: -2em;
 }
 
-.quote-ship-step div {
-  text-align: center;
+.step {
+  display: inline-block;
+  width: 15%;
+  height: 100%;
+  color: white !important;
+}
+
+.step div {
+  padding-top: 0.7em;
+}
+
+.step i {
+  padding-top: 0.6em;
 }
 
 .quote-step-indicator-name {
@@ -618,7 +631,7 @@ hr {
   color: black;
 }
 
-.quote-step-indicator-name a {
+.quote-step-indicator-name span {
   color: white !important;
   padding-left: 0.5em;
   padding-right: 0.5em;
