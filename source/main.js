@@ -463,29 +463,61 @@ $('center .button').on('click', function(){
 
 // =================================== TEST ================================
 
-function shipConfigureStep(n){
-    var i = 1, p = document.getElementById("shipStep"+1), o = document.getElementById("shipStepIcon"+1);
+function shipConfigureStep(n) {
+    var i = 1, s = document.querySelector(".shipStep"+1), o = document.getElementById("shipStepIcon"+1);
 
-    while (p !== null){
+    while (s !== null){
         if (i === n){
-            p.style.display = "";
+            s.style.display = "";
             o.className = "circle icon";
         }
         else{
-            p.style.display = "none";
+            s.style.display = "none";
             o.className = "circle thin icon";
         }
         i++;
-        p = document.getElementById("shipStep"+i);
+        s = document.querySelector(".shipStep"+i);
         o = document.getElementById("shipStepIcon"+i);
     }
 }
 
+// function paintSelection(n) {
+//   var i = 1, p = document.querySelector(".paint"+1),
+//   // while (p !== null){
+//
+//
+//   if((i === n).checked = true) {
+//     document.getElementById("paint-name-350").textContent = "WHITE"
+//   }else if((i === n).checked = true) {
+//     document.getElementById("paint-name-350").textContent = "GREY"
+//   }else if((i === n).checked = true) {
+//     document.getElementById("paint-name-350").textContent = "RED"
+//   }else if((i === n).checked = true) {
+//     document.getElementById("paint-name-350").textContent = "YELLOW"
+//   }
+//
+//   i++;
+//   p = document.querySelector(".paint"+i);
+//
+// }
+
+function paintSelection(n) {
+  var i = n, p = document.querySelector(".paint"+n), color = p.getAttribute("value")
+
+  while (p !== null){
+    if((i === n).checked = true) {
+      document.getElementById("paint-name-350").textContent = color.toUpperCase()
+    }
+    i++;
+    p = document.querySelector(".paint"+i);
+
+  }
+}
 
 // math for testing purposes
 function submit_form() {
 	var sum = parseInt(document.getElementById("num1").value) +
             parseInt(document.getElementById("num2").value) +
             parseInt(document.getElementById("num3").value);
-  alert("Your result is: " + sum);
+  alert("Your summary is: " + sum);
 }

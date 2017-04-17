@@ -1988,30 +1988,29 @@
           <div class="quote-info">
 
             <!-- COLOR (PAINT) -->
-            <div id="shipStep1">
+            <div class="shipStep1">
               Color<br>
               <!-- ============ COLOR (PAINT) ============ -->
               <div class="quote-info-paint">
                 <div class="paint-name">
-                  <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                  <div id="paint-name-350" class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
                   <div class="paint-metallic">Metallic</div>
                 </div>
                 <div class="paint-colors">
-                  <div class="paint-white">
-                    <img src="../assets/paint/white-paint.jpg" alt="">
-                  </div>
-                  <div class="paint-grey">
-                    <img src="../assets/paint/silver-paint.jpg" alt="">
-                  </div>
-                  <div class="paint-red">
-                    <img src="../assets/paint/red-paint.jpg" alt="">
-                  </div>
-                  <div class="paint-blue">
-                    <img src="../assets/paint/blue-paint.jpg" alt="">
-                  </div>
-                  <div class="paint-yellow">
-                    <img src="../assets/paint/yellow-paint.jpg" alt="">
-                  </div>
+                  <input id="white" class="paint1" name="paintColor" type="radio" value="white">
+                  <label class="paint white" for="white" onclick="paintSelection(1)"></label>
+
+                  <input id="grey" class="paint2" name="paintColor" type="radio" value="grey">
+                  <label class="paint grey" for="grey" onclick="paintSelection(2)"></label>
+
+                  <input id="red" class="paint3" name="paintColor" type="radio" value="red">
+                  <label class="paint red" for="red" onclick="paintSelection(3)"></label>
+
+                  <input id="blue" class="paint4" name="paintColor" type="radio" value="blue">
+                  <label class="paint blue" for="blue" onclick="paintSelection(4)"></label>
+
+                  <input id="yellow" class="paint5" name="paintColor" type="radio" value="yellow">
+                  <label class="paint yellow" for="yellow" onclick="paintSelection(5)"></label>
                 </div>
               </div>
 
@@ -2024,7 +2023,7 @@
             </div>
 
             <!-- ============ UPHOLSTERY ============ -->
-            <div id="shipStep2" style="display: none;">
+            <div class="shipStep2" style="display: none;">
               Material<br>
               <div class="paint-name">
                 <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
@@ -2033,21 +2032,21 @@
 
               <div class="quote-upholstery">
                 <div class="materials">
-                  <div class="paint-white">
+                  <button class="paint-white">
                     <img src="../assets/interior/material_1.jpg" alt="">
-                  </div>
-                  <div class="paint-grey">
+                  </button>
+                  <button class="paint-grey">
                     <img src="../assets/interior/material_2.jpg" alt="">
-                  </div>
-                  <div class="paint-red">
+                  </button>
+                  <button class="paint-red">
                     <img src="../assets/interior/material_3.jpg" alt="">
-                  </div>
-                  <div class="paint-blue">
+                  </button>
+                  <button class="paint-blue">
                     <img src="../assets/interior/material_4.jpg" alt="">
-                  </div>
-                  <div class="paint-yellow">
+                  </button>
+                  <button class="paint-yellow">
                     <img src="../assets/interior/material_5.jpg" alt="">
-                  </div>
+                  </button>
                 </div>
 
               </div>
@@ -2068,7 +2067,7 @@
             </div>
 
             <!-- ============ LOCATION ============ -->
-            <div id="shipStep3" style="display: none;">
+            <div class="shipStep3" style="display: none;">
               <div class="quote-location">
                 LOCTION<br>
 
@@ -2079,21 +2078,21 @@
 
                 <div class="quote-location">
                   <div class="location">
-                    <div class="planet1">
+                    <button class="planet1">
                       <img src="../assets/planets/planet1.png" alt="">Crusaader
-                    </div>
-                    <div class="planet2">
+                    </button>
+                    <button class="planet2">
                       <img src="../assets/planets/planet2.png" alt="">Terra
-                    </div>
-                    <div class="planet3">
-                      <img src="../assets/planets/planet3.png" alt="">
-                    </div>
-                    <div class="planet4">
-                      <img src="../assets/planets/planet4.png" alt="">
-                    </div>
-                    <div class="planet5">
-                      <img src="../assets/planets/planet5.png" alt="">
-                    </div>
+                    </button>
+                    <button class="planet3">
+                      <img src="../assets/planets/planet3.png" alt="">Stanton
+                    </button>
+                    <button class="planet4">
+                      <img src="../assets/planets/planet4.png" alt="">Idris
+                    </button>
+                    <button class="planet5">
+                      <img src="../assets/planets/planet5.png" alt="">Kiel
+                    </button>
                   </div>
 
                 </div>
@@ -2118,7 +2117,7 @@
             </div>
 
             <!-- ============ SUMMARY ============ -->
-            <div id="shipStep4" style="display: none;">
+            <div class="shipStep4" style="display: none;">
               <div class="quote-summary-step">
 
               </div>
