@@ -685,6 +685,11 @@ hr {
   bottom: 4%;
 }
 
+#shipStep2 {
+  position: relative !important;
+  height: 20vh;
+}
+
 .paint-name{
   display: inline-block;
 }
@@ -761,6 +766,10 @@ hr {
   text-align: center;
 }
 
+.location > * {
+  text-align: center;
+}
+
 .location > div {
   display: inline-block;
   width: 10%;
@@ -769,7 +778,7 @@ hr {
 }
 
 .location div > img {
-  width: 130%;
+  width: 100%;
   /*height: 9vh;*/
 }
 
