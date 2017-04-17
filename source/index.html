@@ -2026,27 +2026,27 @@
             <div class="shipStep2" style="display: none;">
               Material<br>
               <div class="paint-name">
-                <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                <div id="material-name" class="quote-info-material-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
                 <div class="paint-metallic">Material</div>
               </div>
 
               <div class="quote-upholstery">
                 <div class="materials">
-                  <button class="paint-white">
-                    <img src="../assets/interior/material_1.jpg" alt="">
-                  </button>
-                  <button class="paint-grey">
-                    <img src="../assets/interior/material_2.jpg" alt="">
-                  </button>
-                  <button class="paint-red">
-                    <img src="../assets/interior/material_3.jpg" alt="">
-                  </button>
-                  <button class="paint-blue">
-                    <img src="../assets/interior/material_4.jpg" alt="">
-                  </button>
-                  <button class="paint-yellow">
-                    <img src="../assets/interior/material_5.jpg" alt="">
-                  </button>
+                  <input id="grey-leather" class="material1" type="radio" name="material" value="METEOR">
+                  <label class="material grey-leather" for="grey-leather" onclick="materialSelection(1)"></label>
+
+                  <input id="black-leather" class="material2" type="radio" name="material" value="SINGULARITY">
+                  <label class="material black-leather" for="black-leather" onclick="materialSelection(2)"></label>
+
+                  <input id="tan-leather" class="material3" type="radio" name="material" value="ESPERIA SUN">
+                  <label class="material tan-leather" for="tan-leather" onclick="materialSelection(3)"></label>
+
+                  <input id="blue-metal" class="material4" type="radio" name="material" value="STAR HEART">
+                  <label class="material blue-metal" for="blue-metal" onclick="materialSelection(4)"></label>
+
+                  <input id="black-metal" class="material5" type="radio" name="material" value="ECLIPSE">
+                  <label class="material black-metal" for="blackmetal" onclick="materialSelection(5)"></label>
+
                 </div>
 
               </div>
@@ -2072,13 +2072,31 @@
                 LOCTION<br>
 
                 <div class="paint-name">
-                  <div class="quote-info-color-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                  <div id="planet-name" class="planet-name"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
                   <div class="paint-metallic">Planet</div>
                 </div>
 
                 <div class="quote-location">
                   <div class="location">
-                    <button class="planet1">
+
+                    <input id="crusader" class="planet1" type="radio" name="planet" value="Crusader">
+                    <label class="planet crusader" for="crusader" onclick="planetSelection(1)"></label>
+
+                    <input id="terra" class="planet1" type="radio" name="planet" value="Terra">
+                    <label class="planet terra" for="terra" onclick="planetSelection(2)"></label>
+
+                    <input id="stanton" class="planet1" type="radio" name="planet" value="Stanton">
+                    <label class="planet stanton" for="stanton" onclick="planetSelection(3)"></label>
+
+                    <input id="idris" class="planet1" type="radio" name="planet" value="Idris">
+                    <label class="planet idris" for="idris" onclick="planetSelection(4)"></label>
+
+                    <input id="kiel" class="planet1" type="radio" name="planet" value="Kiel">
+                    <label class="planet kiel" for="kiel" onclick="planetSelection(5)"></label>
+
+
+
+                    <!-- <button class="planet1">
                       <img src="../assets/planets/planet1.png" alt="">Crusaader
                     </button>
                     <button class="planet2">
@@ -2092,7 +2110,7 @@
                     </button>
                     <button class="planet5">
                       <img src="../assets/planets/planet5.png" alt="">Kiel
-                    </button>
+                    </button> -->
                   </div>
 
                 </div>

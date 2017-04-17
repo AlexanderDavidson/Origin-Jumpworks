@@ -775,31 +775,49 @@ hr {
   text-align: center;
 }
 
-.materials > button {
-  display: inline-block;
-  width: 12%;
-  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  background-color: white;
-  box-sizing: border-box;
-  border: 0;
-  padding: 0;
-}
-
-.materials button > img {
-  width: 100%;
-  height: 9vh;
+.materials > label {
   -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
-.materials .selected-paint { /* for selected paint color */
-  display: inline-block;
+.materials > input {
+  position: absolute;
+}
+
+.grey-leather {
+  background-image: url(../assets/interior/material_1.jpg);
+}
+
+.black-leather {
+  background-image: url(../assets/interior/material_2.jpg);
+}
+
+.tan-leather {
+  background-image: url(../assets/interior/material_3.jpg);
+}
+
+.blue-metal {
+  background-image: url(../assets/interior/material_4.jpg);
+}
+
+.black-metal {
+  background-image: url(../assets/interior/material_5.jpg);
+}
+
+.material {
+  height: 10em;
   width: 12%;
-  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  background-color: #2ec4b6;
-  box-sizing: border-box;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+
+  -webkit-filter: non;
+  -moz-filter: none;
+  filter: none;
 }
 
 .quote-location {
@@ -814,21 +832,51 @@ hr {
   text-align: center;
 }
 
-.location > button {
+.crusader {
+  background-image: url(../assets/planets/planet1.png) !important;
+}
+
+.terra {
+  background-image: url(../assets/planets/planet2.png) !important;
+}
+
+.stanton {
+  background-image: url(../assets/planets/planet3.png) !important;
+}
+
+.idris {
+  background-image: url(../assets/planets/planet4.png) !important;
+}
+
+.kiel {
+  background-image: url(../assets/planets/planet5.png) !important;
+}
+
+.location input {
+  position: absolute;
+}
+
+.planet {
+  height: 10em;
+  width: 12%;
+  cursor: pointer;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  display: inline-block !important;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+
+  -webkit-filter: non;
+  -moz-filter: none;
+  filter: none;
+}
+
+.location > label {
   display: inline-block;
   width: 10%;
   margin-left: 1.2em;
   margin-right: 1.2em;
   background: transparent;
   border: 0;
-}
-
-.location button > img {
-  width: 100%;
-  /*height: 9vh;*/
-}
-
-.location .selected-paint { /* for selected paint color */
-  display: inline-block;
-  width: 12%;
 }

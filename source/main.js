@@ -514,6 +514,32 @@ function paintSelection(n) {
   }
 }
 
+function materialSelection(n) {
+  var i = n, p = document.querySelector(".material"+n), color = p.getAttribute("value")
+
+  while (p !== null){
+    if((i === n).checked = true) {
+      document.getElementById("material-name").textContent = color.toUpperCase()
+    }
+    i++;
+    p = document.querySelector(".material"+i);
+
+  }
+}
+
+function planetSelection(n) {
+  var i = n, p = document.querySelector(".planet"+n), color = p.getAttribute("value")
+
+  while (p !== null){
+    if((i === n).checked = true) {
+      document.getElementById("planet-name").textContent = color.toUpperCase()
+    }
+    i++;
+    p = document.querySelector(".planet"+i);
+
+  }
+}
+
 // math for testing purposes
 function submit_form() {
 	var sum = parseInt(document.getElementById("num1").value) +
