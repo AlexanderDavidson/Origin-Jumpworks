@@ -1985,7 +1985,7 @@
         <!-- ==================== SHIP INFO WIZARD ==================== -->
         <!-- ==================== SHIP INFO WIZARD ==================== -->
         <div class="quote-info">
-          <div class="quote-info">
+          <form class="quote-info">
 
             <!-- COLOR (PAINT) -->
             <div class="shipStep1">
@@ -2137,6 +2137,22 @@
             <!-- ============ SUMMARY ============ -->
             <div class="shipStep4" style="display: none;">
               <div class="quote-summary-step">
+                <button type="button" name="buttonSummary" onclick="summaryPaint()"></button>
+                <div class="" style="color:black">
+                  <div class="summary-paint"></div>
+                  <input type="submit" value="Submit form">
+                </div>
+                <div class="" style="color:black">
+                  <div class="summary-material"></div>
+                  <input type="submit" value="Submit form">
+                </div>
+                <div class="" style="color:black">
+                  <div class="summary-location"></div>
+                  <input type="submit" value="Submit form">
+                </div>
+
+
+
 
               </div>
               <div class="ui animated fade left floated inverted blue basic button quote-step-next-button" type="button" onclick="shipConfigureStep(3)" tabindex="0">
@@ -2155,7 +2171,7 @@
 
             </div>
 
-          </div>
+          </form>
         </div>
 
         <!-- ============== SUMMARY ============== -->

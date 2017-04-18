@@ -501,6 +501,11 @@ function shipConfigureStep(n) {
 //
 // }
 
+function masterPaint() {
+  paintSelection(n);
+  summaryPaint(paintColor);
+}
+
 function paintSelection(n) {
   var i = n, p = document.querySelector(".paint"+n), color = p.getAttribute("value")
 
@@ -552,6 +557,13 @@ function planetSelection(n) {
 //
 //   }
 // }
+function summaryPaint() {
+  var selectedPaint = document.querySelector(".quote-info-color-name").textContent
+  var $sumPaint = document.querySelector(".summary-paint")
+
+  $sumPaint.innerHTML = selectedPaint
+
+}
 
 // math for testing purposes
 function submit_form() {
