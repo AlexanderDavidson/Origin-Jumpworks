@@ -162,6 +162,31 @@ hr {
   margin-top: 1em !important;
 }
 
+/*input[type="radio"] {
+    display:none;
+}*/
+
+input[type="radio"] {
+    background-color: #52565b;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"]:checked {
+     background-color: white;
+}
+
+input[type="radio"],
+input[type="radio"]:checked {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+
+
 /* ============ 85x ============ */
 #ship-grid-85x {
   background-image: url(../assets/ships/85x/bg.jpg);
@@ -493,8 +518,12 @@ hr {
 }
 
 .quote-step-next-button {
+  font-family: 'Josefin Sans', sans-serif !important;
+  position: relative !important;
   border-radius: 0 !important;
-  border: -1.5em;
+  margin-right: 1em !important;
+  margin-left: 1em !important;
+  margin-bottom: 1em !important;
 }
 
 #quote-ship-img-m50 {
@@ -655,7 +684,7 @@ hr {
 .quote-info {
   font-family: 'Josefin Sans', sans-serif;
   color: white;
-  height: 20vh;
+  height: 29vh;
   width: 100%;
   background-color: black;
   border-bottom: 1px solid white;
@@ -767,10 +796,6 @@ hr {
   filter: brightness(1.2) grayscale(0.5) opacity(0.9);
 }
 
-.quote-selector-sliders {
-  text-align: center;
-}
-
 .materials {
   text-align: center;
 }
@@ -782,6 +807,11 @@ hr {
 
 .materials > input {
   position: absolute;
+}
+
+.choose-swap {
+  font-size: 2em;
+  height: 2em;
 }
 
 .grey-leather {
@@ -821,7 +851,7 @@ hr {
 }
 
 .quote-location {
-  height: 11em;
+  height: 17em;
 }
 
 .location {
