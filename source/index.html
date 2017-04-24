@@ -1994,22 +1994,23 @@
               <div class="quote-info-paint">
                 <div class="paint-name">
                   <div id="paint-name-350" class="quote-info-color-name choose-swap"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                  <div class="paint-price"></div>
                   <div class="paint-metallic">Metallic</div>
                 </div>
                 <div class="paint-colors">
-                  <input id="white" class="paint1" name="paintColor" type="radio" value="super nova white">
+                  <input id="white" class="paint1" name="paintColor" type="radio" value="super nova white" uec-upgrade="0">
                   <label class="paint white" for="white" onclick="paintSelection(1)"></label>
 
-                  <input id="grey" class="paint2" name="paintColor" type="radio" value="asteroid grey">
+                  <input id="grey" class="paint2" name="paintColor" type="radio" value="asteroid grey" uec-upgrade="420">
                   <label class="paint grey" for="grey" onclick="paintSelection(2)"></label>
 
-                  <input id="red" class="paint3" name="paintColor" type="radio" value="xi'an red">
+                  <input id="red" class="paint3" name="paintColor" type="radio" value="xi'an red" uec-upgrade="460">
                   <label class="paint red" for="red" onclick="paintSelection(3)"></label>
 
-                  <input id="blue" class="paint4" name="paintColor" type="radio" value="ion blue">
+                  <input id="blue" class="paint4" name="paintColor" type="radio" value="ion blue" uec-upgrade="480">
                   <label class="paint blue" for="blue" onclick="paintSelection(4)"></label>
 
-                  <input id="yellow" class="paint5" name="paintColor" type="radio" value="pulsar yellow">
+                  <input id="yellow" class="paint5" name="paintColor" type="radio" value="pulsar yellow" uec-upgrade="670">
                   <label class="paint yellow" for="yellow" onclick="paintSelection(5)"></label>
                 </div>
               </div>
@@ -2027,24 +2028,25 @@
               Choose your interior<br>
               <div class="paint-name">
                 <div id="material-name" class="quote-info-material-name choose-swap"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                <div class="material-price"></div>
                 <div class="paint-metallic">Material</div>
               </div>
 
               <div class="quote-upholstery">
                 <div class="materials">
-                  <input id="grey-leather" class="material1" type="radio" name="material" value="METEOR">
+                  <input id="grey-leather" class="material1" type="radio" name="material" value="METEOR" uec-upgrade="0">
                   <label class="material grey-leather" for="grey-leather" onclick="materialSelection(1)"></label>
 
-                  <input id="black-leather" class="material2" type="radio" name="material" value="SINGULARITY">
+                  <input id="black-leather" class="material2" type="radio" name="material" value="SINGULARITY" uec-upgrade="640">
                   <label class="material black-leather" for="black-leather" onclick="materialSelection(2)"></label>
 
-                  <input id="tan-leather" class="material3" type="radio" name="material" value="ESPERIA SUN">
+                  <input id="tan-leather" class="material3" type="radio" name="material" value="ESPERIA SUN" uec-upgrade="820">
                   <label class="material tan-leather" for="tan-leather" onclick="materialSelection(3)"></label>
 
-                  <input id="blue-metal" class="material4" type="radio" name="material" value="STAR HEART">
+                  <input id="blue-metal" class="material4" type="radio" name="material" value="STAR HEART" uec-upgrade="860">
                   <label class="material blue-metal" for="blue-metal" onclick="materialSelection(4)"></label>
 
-                  <input id="black-metal" class="material5" type="radio" name="material" value="ECLIPSE">
+                  <input id="black-metal" class="material5" type="radio" name="material" value="ECLIPSE" uec-upgrade="1260">
                   <label class="material black-metal" for="blackmetal" onclick="materialSelection(5)"></label>
 
                 </div>
@@ -2137,7 +2139,37 @@
             <!-- ============ SUMMARY ============ -->
             <div class="shipStep4" style="display: none;">
               <div class="quote-summary-step">
+                <div class="sum-color">
+                  <h2>Color</h2><span class="paint-name-sum"></span><span class="paint-price-sum"></span>
+                </div>
+                <div class="sum-interior">
+                  <h2>Interior</h2><span class="material-name-sum"></span><span class="material-price-sum"></span>
+                </div>
+                <div class="sum-location">
+                  <h2>Location</h2><span class="planet-name-sum"></span>
+                </div>
+                <div class="sum-price">
+                  <h2>MSRP</h2><span></span>
+                </div>
 
+                <!-- <div class="ui list">
+                  <div class="item">
+                    <div class="header">Color</div>
+                    <span class="paint-name-sum"></span>
+                  </div>
+                  <div class="item">
+                    <div class="header">Interior</div>
+                    <span class="material-name-sum"></span>
+                  </div>
+                  <div class="item">
+                    <div class="header">Location</div>
+                    <span class="planet-name-sum"></span>
+                  </div>
+                  <div class="item">
+                    <div class="header">MSRP</div>
+                    <span class="sum-price"></span>
+                  </div>
+                </div> -->
               </div>
               <div class="ui animated fade left floated inverted blue basic button quote-step-next-button" type="button" onclick="shipConfigureStep(3)" tabindex="0">
                 <div class="visible content"><i class="angle double left icon"></i>LOCATION</div>
@@ -2167,7 +2199,7 @@
               <span class="model-name"></span> <!-- INSERT MODEL NAME -->
             </div>
             <div class="quote-summary-msrp">
-              <span class="msrp">MSRP</span>
+              <span class="msrp">Base MSRP</span>
               <span>|</span>
               <span class="uec"></span> <!-- INSERT PRICE -->
             </div>

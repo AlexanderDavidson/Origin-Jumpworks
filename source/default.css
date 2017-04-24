@@ -698,6 +698,14 @@ input[type="radio"]:checked {
   color: white;
 }
 
+.quote-summary-step {
+  font-family: 'Josefin Sans', sans-serif !important;
+  /*height: 10vh;
+  width: 100%;*/
+  background-color: black;
+  color: white;
+}
+
 .quote-summary-info {
   padding-left: 2%;
   padding-top: 4vh;
@@ -909,4 +917,17 @@ input[type="radio"]:checked {
   margin-right: 1.2em;
   background: transparent;
   border: 0;
+}
+
+.quote-summary-step h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  display: inline-block;
+}
+
+.quote-summary-step span {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  padding-left: 2em;
+  display: inline-block;
 }

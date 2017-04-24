@@ -502,11 +502,14 @@ function shipConfigureStep(n) {
 // }
 
 function paintSelection(n) {
-  var i = n, p = document.querySelector(".paint"+n), color = p.getAttribute("value")
+  var i = n, p = document.querySelector(".paint"+n), color = p.getAttribute("value"), cost = p.getAttribute("uec-upgrade")
 
   while (p !== null){
     if((i === n).checked = true) {
       document.getElementById("paint-name-350").textContent = color.toUpperCase()
+      document.querySelector(".paint-price").textContent = "+ ¤" + cost.toUpperCase() + " UEC"
+      document.querySelector(".paint-price-sum").textContent = "+ ¤" + cost.toUpperCase() + " UEC"
+      document.querySelector(".paint-name-sum").textContent = color.toUpperCase()
     }
     i++;
     p = document.querySelector(".paint"+i);
@@ -515,11 +518,14 @@ function paintSelection(n) {
 }
 
 function materialSelection(n) {
-  var i = n, p = document.querySelector(".material"+n), material = p.getAttribute("value")
+  var i = n, p = document.querySelector(".material"+n), material = p.getAttribute("value"), cost = p.getAttribute("uec-upgrade")
 
   while (p !== null){
     if((i === n).checked = true) {
       document.getElementById("material-name").textContent = material.toUpperCase()
+      document.querySelector(".material-price").textContent = "+ ¤" + cost.toUpperCase() + " UEC"
+      document.querySelector(".material-price-sum").textContent = "+ ¤" + cost.toUpperCase() + " UEC"
+      document.querySelector(".material-name-sum").textContent = material.toUpperCase()
     }
     i++;
     p = document.querySelector(".material"+i);
@@ -532,7 +538,8 @@ function planetSelection(n) {
 
   while (p !== null){
     if((i === n).checked = true) {
-      document.getElementById("planet-name").textContent = planet.toUpperCase()
+      document.querySelector(".planet-name").textContent = planet.toUpperCase()
+      document.querySelector(".planet-name-sum").textContent = planet.toUpperCase()
     }
     i++;
     p = document.querySelector(".planet"+i);
@@ -555,8 +562,8 @@ function planetSelection(n) {
 
 // math for testing purposes
 function submit_form() {
-	var sum = parseInt(document.getElementById("num1").value) +
-            parseInt(document.getElementById("num2").value) +
-            parseInt(document.getElementById("num3").value);
+	var sum = parseInt(document.querySelector(".paint-price-sum").value) +
+            parseInt(document.querySelector(".material-price-sum").value) +
+            parseInt(document.querySelector("num3").value);
   alert("Your summary is: " + sum);
 }
