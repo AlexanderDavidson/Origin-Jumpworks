@@ -551,19 +551,7 @@ function planetSelection(n) {
 
   }
 }
-//
-// function planetSelection(n) {
-//   var i = n, p = document.querySelector(".planet"+n), planet = p.getAttribute("value")
-//
-//   while (p !== null){
-//     if((i === n).checked = true) {
-//       document.getElementById("planet-name").textContent = planet.toUpperCase()
-//     }
-//     i++;
-//     p = document.querySelector(".planet"+i);
-//
-//   }
-// }
+
 function summaryPaint() {
   var selectedPaint = document.querySelector(".quote-info-color-name").textContent
   var $sumPaint = document.querySelector(".summary-paint")
@@ -576,6 +564,12 @@ function summaryPaint() {
 function submit_form() {
 	var sum = parseInt(document.querySelector(".paint-price-sum").value) +
             parseInt(document.querySelector(".material-price-sum").value) +
-            parseInt(document.querySelector("num3").value);
+            shipsInfo[i].basePrice;
   alert("Your summary is: " + sum);
 }
+// function submit_form() {
+// 	var sum = parseInt(document.querySelector(".paint-price-sum").value) +
+//             parseInt(document.querySelector(".material-price-sum").value) +
+//             parseInt(document.querySelector("num3").value);
+//   alert("Your summary is: " + sum);
+// }
