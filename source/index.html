@@ -1932,6 +1932,7 @@
 
       </div>
     </div>
+
 <!-- ============ QUOTE MODAL 350r ============ -->
     <div class="ui modal" id="modal350r">
       <i class="close icon"></i>
@@ -1963,26 +1964,10 @@
               <div>SUMMARY</div>
               <i id="shipStepIcon4" class="circle thin icon"></i>
             </div>
-
-            <!-- <div class="quote-step-indicator-name">
-              <span>COLOR</span>
-              <span>|</span>
-              <span>INTERIOR</span>
-              <span>|</span>
-              <span>LOCATION</span>
-              <span>|</span>
-              <span>SUMMARY</span>
-            </div>
-            <div class="quote-step-indicator-icon">
-              <i id="shipStepIcon1" class="circle icon"></i>
-              <i id="shipStepIcon2" class="small circle thin icon"></i>
-              <i id="shipStepIcon3" class="small circle thin icon"></i>
-              <i id="shipStepIcon4" class="small circle thin icon"></i>
-            </div> -->
           </div>
           <hr>
         </div>
-        <!-- ==================== SHIP INFO WIZARD ==================== -->
+
         <!-- ==================== SHIP INFO WIZARD ==================== -->
         <div class="quote-info">
           <form class="quote-info">
@@ -1993,24 +1978,24 @@
               <!-- ============ COLOR (PAINT) ============ -->
               <div class="quote-info-paint">
                 <div class="paint-name">
-                  <div id="paint-name-350" class="quote-info-color-name choose-swap"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
+                  <div id="paint-name-350" class="quote-info-color-name choose-swap paint-choice"></div> <!-- INSERT SELECTED PAINT COLOR NAME -->
                   <div class="paint-price"></div>
                   <div class="paint-metallic">Metallic</div>
                 </div>
                 <div class="paint-colors">
-                  <input id="white" class="paint1" name="paintColor" type="radio" value="super nova white" uec-upgrade="0">
+                  <input class="paint1" name="paintColor" type="radio" value="super nova white" uec-upgrade="0">
                   <label class="paint white" for="white" onclick="paintSelection(1)"></label>
 
-                  <input id="grey" class="paint2" name="paintColor" type="radio" value="asteroid grey" uec-upgrade="420">
+                  <input class="paint2" name="paintColor" type="radio" value="asteroid grey" uec-upgrade="420">
                   <label class="paint grey" for="grey" onclick="paintSelection(2)"></label>
 
-                  <input id="red" class="paint3" name="paintColor" type="radio" value="xi'an red" uec-upgrade="460">
+                  <input class="paint3" name="paintColor" type="radio" value="xi'an red" uec-upgrade="460">
                   <label class="paint red" for="red" onclick="paintSelection(3)"></label>
 
-                  <input id="blue" class="paint4" name="paintColor" type="radio" value="ion blue" uec-upgrade="480">
+                  <input class="paint4" name="paintColor" type="radio" value="ion blue" uec-upgrade="480">
                   <label class="paint blue" for="blue" onclick="paintSelection(4)"></label>
 
-                  <input id="yellow" class="paint5" name="paintColor" type="radio" value="pulsar yellow" uec-upgrade="670">
+                  <input class="paint5" name="paintColor" type="radio" value="pulsar yellow" uec-upgrade="670">
                   <label class="paint yellow" for="yellow" onclick="paintSelection(5)"></label>
                 </div>
               </div>
@@ -2081,42 +2066,22 @@
                 <div class="quote-location">
                   <div class="location">
 
-                    <input id="crusader" class="planet1" type="radio" name="planet" value="Crusader">
+                    <input class="planet1" type="radio" name="planet" value="Crusader">
                     <label class="planet crusader" for="crusader" onclick="planetSelection(1)"></label>Crusader
 
-                    <input id="terra" class="planet2" type="radio" name="planet" value="Terra">
+                    <input class="planet2" type="radio" name="planet" value="Terra">
                     <label class="planet terra" for="terra" onclick="planetSelection(2)"></label>Terra
 
-                    <input id="stanton" class="planet3" type="radio" name="planet" value="Stanton">
+                    <input class="planet3" type="radio" name="planet" value="Stanton">
                     <label class="planet stanton" for="stanton" onclick="planetSelection(3)"></label>Stanton
 
-                    <input id="idris" class="planet4" type="radio" name="planet" value="Idris">
+                    <input class="planet4" type="radio" name="planet" value="Idris">
                     <label class="planet idris" for="idris" onclick="planetSelection(4)"></label>Idris
 
-                    <input id="kiel" class="planet5" type="radio" name="planet" value="Kiel">
+                    <input class="planet5" type="radio" name="planet" value="Kiel">
                     <label class="planet kiel" for="kiel" onclick="planetSelection(5)"></label>Kiel
-
-
-
-                    <!-- <button class="planet1">
-                      <img src="../assets/planets/planet1.png" alt="">Crusaader
-                    </button>
-                    <button class="planet2">
-                      <img src="../assets/planets/planet2.png" alt="">Terra
-                    </button>
-                    <button class="planet3">
-                      <img src="../assets/planets/planet3.png" alt="">Stanton
-                    </button>
-                    <button class="planet4">
-                      <img src="../assets/planets/planet4.png" alt="">Idris
-                    </button>
-                    <button class="planet5">
-                      <img src="../assets/planets/planet5.png" alt="">Kiel
-                    </button> -->
                   </div>
-
                 </div>
-
               </div>
               <div class="ui animated fade left floated inverted violet basic button quote-step-next-button" type="button" onclick="shipConfigureStep(2)" tabindex="0">
                 <div class="visible content"><i class="angle double left icon"></i>INTERIOR</div>
@@ -2139,21 +2104,6 @@
             <!-- ============ SUMMARY ============ -->
             <div class="shipStep4" style="display: none;">
               <div class="quote-summary-step">
-
-                <!-- <button type="button" name="buttonSummary" onclick="summaryPaint()"></button>
-                <div class="" style="color:black">
-                  <div class="summary-paint"></div>
-                  <input type="submit" value="Submit form">
-                </div>
-                <div class="" style="color:black">
-                  <div class="summary-material"></div>
-                  <input type="submit" value="Submit form">
-                </div>
-                <div class="" style="color:black">
-                  <div class="summary-location"></div>
-                  <input type="submit" value="Submit form">
-                </div> -->
-
                 <div class="sum-color">
                   <h2>Color</h2><span class="paint-name-sum"></span><span class="paint-price-sum"></span>
                 </div>
@@ -2164,28 +2114,10 @@
                   <h2>Location</h2><span class="planet-name-sum"></span>
                 </div>
                 <div class="sum-price">
-                  <h2>MSRP</h2><span></span>
+                  <h2>MSRP</h2><span class="msrp-sum"></span>
                 </div>
-
-                <!-- <div class="ui list">
-                  <div class="item">
-                    <div class="header">Color</div>
-                    <span class="paint-name-sum"></span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Interior</div>
-                    <span class="material-name-sum"></span>
-                  </div>
-                  <div class="item">
-                    <div class="header">Location</div>
-                    <span class="planet-name-sum"></span>
-                  </div>
-                  <div class="item">
-                    <div class="header">MSRP</div>
-                    <span class="sum-price"></span>
-                  </div>
-                </div> -->
               </div>
+
               <div class="ui animated fade left floated inverted blue basic button quote-step-next-button" type="button" onclick="shipConfigureStep(3)" tabindex="0">
                 <div class="visible content"><i class="angle double left icon"></i>LOCATION</div>
                 <div class="hidden content">
@@ -2204,30 +2136,6 @@
 
           </form>
         </div>
-
-        <!-- ============== SUMMARY ============== -->
-        <div class="quote-summary">
-          <div class="quote-summary-info">
-            <div class="quote-summary-model">
-              <span class="model">Model</span>
-              <span>|</span>
-              <span class="model-name"></span> <!-- INSERT MODEL NAME -->
-            </div>
-            <div class="quote-summary-msrp">
-              <span class="msrp">Base MSRP</span>
-              <span>|</span>
-              <span class="uec"></span> <!-- INSERT PRICE -->
-            </div>
-          </div>
-          <!-- INSERT CORRECT BUTTON FOR CURRENT STEP -->
-          <div class="ui inverted quote-summary-button">
-            <!-- INSERT NEXT/REQUEST A QUOTE BUTTON TEXT -->
-            <button class="ui inverted black button quote-step-next-button"></button>
-          </div>
-        </div>
-
-      </div>
-    </div>
 
 
     <!-- ========================== TEST TEST TEST ======================================== -->

@@ -481,26 +481,6 @@ function shipConfigureStep(n) {
     }
 }
 
-// function paintSelection(n) {
-//   var i = 1, p = document.querySelector(".paint"+1),
-//   // while (p !== null){
-//
-//
-//   if((i === n).checked = true) {
-//     document.getElementById("paint-name-350").textContent = "WHITE"
-//   }else if((i === n).checked = true) {
-//     document.getElementById("paint-name-350").textContent = "GREY"
-//   }else if((i === n).checked = true) {
-//     document.getElementById("paint-name-350").textContent = "RED"
-//   }else if((i === n).checked = true) {
-//     document.getElementById("paint-name-350").textContent = "YELLOW"
-//   }
-//
-//   i++;
-//   p = document.querySelector(".paint"+i);
-//
-// }
-
 function masterPaint() {
   paintSelection(n);
   summaryPaint(paintColor);
@@ -511,7 +491,7 @@ function paintSelection(n) {
 
   while (p !== null){
     if((i === n).checked = true) {
-      document.getElementById("paint-name-350").textContent = color.toUpperCase()
+      document.querySelector(".quote-info-color-name").textContent = color.toUpperCase()
       document.querySelector(".paint-price").textContent = "+ ¤" + cost.toUpperCase() + " UEC"
       document.querySelector(".paint-price-sum").textContent = "+ ¤" + cost.toUpperCase() + " UEC"
       document.querySelector(".paint-name-sum").textContent = color.toUpperCase()
@@ -527,7 +507,7 @@ function materialSelection(n) {
 
   while (p !== null){
     if((i === n).checked = true) {
-      document.getElementById("material-name").textContent = material.toUpperCase()
+      document.querySelector(".quote-info-material-name").textContent = material.toUpperCase()
       document.querySelector(".material-price").textContent = "+ ¤" + cost.toUpperCase() + " UEC"
       document.querySelector(".material-price-sum").textContent = "+ ¤" + cost.toUpperCase() + " UEC"
       document.querySelector(".material-name-sum").textContent = material.toUpperCase()
@@ -560,12 +540,23 @@ function summaryPaint() {
 
 }
 
+function sumUEC() {
+	var sum = parseInt(document.querySelector(".paint-price-sum").innerHTML.match(/\d+/)) +
+            parseInt(document.querySelector(".material-price-sum").innerHTML.match(/\d+/)) +
+            shipsInfo[5].basePrice;
+  var $sum = "¤ " + sum + " UEC"
+  return $sum
+}
+
+document.querySelector('.msrp-sum').textContent = sumUEC()
+
+
 // math for testing purposes
 function submit_form() {
-	var sum = parseInt(document.querySelector(".paint-price-sum").value) +
-            parseInt(document.querySelector(".material-price-sum").value) +
-            shipsInfo[i].basePrice;
-  alert("Your summary is: " + sum);
+	var sum = parseInt(document.querySelector(".paint-price-sum").innerHTML.match(/\d+/)) +
+            parseInt(document.querySelector(".material-price-sum").innerHTML.match(/\d+/)) +
+            shipsInfo[5].basePrice;
+  alert("Your summary is: ¤ " + sum + " UEC");
 }
 // function submit_form() {
 // 	var sum = parseInt(document.querySelector(".paint-price-sum").value) +
