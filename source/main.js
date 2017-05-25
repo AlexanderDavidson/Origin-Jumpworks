@@ -31,6 +31,7 @@ $(document).ready(function(){
 
 
 // ----- Ship Variables -----
+var msrpUpdate = 0
 
 var shipsInfo = [
   {
@@ -543,19 +544,24 @@ function summaryPaint() {
 function sumUEC() {
 	var sum = parseInt(document.querySelector(".paint-price-sum").innerHTML.match(/\d+/)) +
             parseInt(document.querySelector(".material-price-sum").innerHTML.match(/\d+/)) +
-            shipsInfo[5].basePrice;
-  var $sum = "¤ " + sum + " UEC"
-  return $sum
+            shipsInfo[5].basePrice
+  var $sum = "¤" + sum + " UEC"
+  return sum
 }
 
-document.querySelector('.msrp-sum').textContent = sumUEC()
+
+var $msrp = document.querySelector('.msrp-sum')
+sumUEC()
+$msrp.textContent = sumUEC()
+
+
 
 
 // math for testing purposes
 function submit_form() {
 	var sum = parseInt(document.querySelector(".paint-price-sum").innerHTML.match(/\d+/)) +
             parseInt(document.querySelector(".material-price-sum").innerHTML.match(/\d+/)) +
-            shipsInfo[5].basePrice;
+            shipsInfo[5].basePrice
   alert("Your summary is: ¤ " + sum + " UEC");
 }
 // function submit_form() {
