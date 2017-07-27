@@ -546,16 +546,14 @@ function sumUEC() {
             parseInt(document.querySelector(".material-price-sum").innerHTML.match(/\d+/)) +
             shipsInfo[5].basePrice
   var $sum = "¤" + sum + " UEC"
-  return sum
-}
 
+  return $sum
+}
 
 var $msrp = document.querySelector('.msrp-sum')
 sumUEC()
-$msrp.textContent = sumUEC()
-
-
-
+var $msrpSum = sumUEC()
+$msrp.textContent = $msrpSum
 
 // math for testing purposes
 function submit_form() {
