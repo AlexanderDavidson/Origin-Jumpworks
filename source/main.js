@@ -370,7 +370,7 @@ $(document).ready(function(){
 
 
 $('#ship-m50-btn-quote').click(function(){ // refers to: id on button
-  $('')  // refers to: no clue but it's working
+  $('')
     .modal({
       inverted: false,
       allowMultiple: false,
@@ -381,7 +381,7 @@ $('#ship-m50-btn-quote').click(function(){ // refers to: id on button
 });
 
 $('#ship-85x-btn-quote').click(function(){
-  $('')  // refers to: no clue but it's working
+  $('')
     .modal({
       inverted: false,
       allowMultiple: false,
@@ -392,7 +392,7 @@ $('#ship-85x-btn-quote').click(function(){
 });
 
 $('#ship-300i-btn-quote').click(function(){
-  $('')  // refers to: no clue but it's working
+  $('')
     .modal({
       inverted: false,
       allowMultiple: false,
@@ -403,7 +403,7 @@ $('#ship-300i-btn-quote').click(function(){
 });
 
 $('#ship-315p-btn-quote').click(function(){
-  $('')  // refers to: no clue but it's working
+  $('')
     .modal({
       inverted: false,
       allowMultiple: false,
@@ -414,7 +414,7 @@ $('#ship-315p-btn-quote').click(function(){
 });
 
 $('#ship-325a-btn-quote').click(function(){
-  $('')  // refers to: no clue but it's working
+  $('')
     .modal({
       inverted: false,
       allowMultiple: false,
@@ -464,6 +464,20 @@ $('center .button').on('click', function(){
 
 // =================================== TEST ================================
 
+function modalShipGrabber(n) {
+
+}
+
+$('.quote-button').on('click', function(){
+	// using the attribute data-modal to identify for what modal the button references
+	modal = $(this).attr('data-modal');
+	// creating the individual event attached to click over button
+	$('#'+modal+'.modal').modal(
+		'show'
+	);
+});
+
+// ================================== Uniiversal Quote Test ============================
 function shipConfigureStep(n) {
     var i = 1, s = document.querySelector(".shipStep"+1), o = document.getElementById("shipStepIcon"+1);
 
